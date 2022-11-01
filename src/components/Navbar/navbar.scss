@@ -1,0 +1,150 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
+
+.navbar-cont {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  overflow: visible;
+  position: relative;
+}
+
+.nav-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 150px;
+  z-index: 1;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-size: $larger-fonts;
+
+    span:last-child {
+      color: $btn-green-color;
+    }
+  }
+}
+
+.navbar-links {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+
+  ul {
+    display: flex;
+    column-gap: 1rem;
+
+    li {
+      font-size: $large-fonts;
+      font-weight: 500;
+
+      a {
+        color: $dark-blue-color;
+      }
+
+      a:hover {
+        color: $btn-green-color;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.navbar-account {
+  display: flex;
+  justify-content: center;
+
+  .navbar-account-cont {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 2rem;
+
+    .navbar-account-prof {
+      display: flex;
+      column-gap: 10px;
+      padding: 0 1rem;
+
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        small {
+          font-size: $medium-fonts;
+        }
+
+        small:first-child {
+          font-weight: 500;
+        }
+
+        small:last-child {
+          font-weight: 400;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .navbar-account-btn {
+      position: absolute;
+      display: none;
+      top: 45px;
+      width: 100%;
+      padding-top: 10px;
+
+      div {
+        background-color: $lighter-gray-color;
+        padding: 30px 0;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+        button {
+          width: 130px;
+          height: 35px;
+          background-color: $white-color;
+          border-radius: 5px;
+          border: 1px rgba(0, 0, 0, 0.2) solid;
+          color: $dark-blue-color;
+          margin: auto;
+        }
+      }
+    }
+
+    .navbar-account-prof:hover ~ .navbar-account-btn {
+      display: block;
+    }
+
+    .navbar-account-btn:hover {
+      display: block;
+    }
+  }
+
+  .login-btn {
+    font-size: $large-fonts;
+    font-weight: 500;
+    color: $dark-blue-color;
+  }
+
+  .login-btn:hover {
+    color: $btn-green-color;
+    transition: 0.3s ease-in-out;
+  }
+}

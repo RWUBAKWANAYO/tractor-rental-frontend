@@ -1,0 +1,12 @@
+@import '../../../assets/styles/colors.scss';
+@import '../../../assets/styles/fonts.scss';
+
+.common-btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: $btn-green-color;
+  color: $white-color;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

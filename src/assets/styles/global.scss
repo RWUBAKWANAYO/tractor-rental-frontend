@@ -1,0 +1,36 @@
+@import "./fonts.scss";
+@import "./colors.scss";
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $roboto-font;
+}
+
+body {
+  background-color: $lighter-gray-color;
+  color: $dark-blue-color;
+}
+
+button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

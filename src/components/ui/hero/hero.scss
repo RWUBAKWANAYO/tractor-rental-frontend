@@ -1,0 +1,50 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.hero-cont {
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5%;
+
+  .hero-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    h1 {
+      font-size: $largest-fonts;
+      font-weight: 500;
+
+      span {
+        font-size: $larger-fonts;
+      }
+    }
+
+    p {
+      font-size: $paragraph-font;
+      line-height: 1.5;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+
+  .hero-img {
+    width: calc(500px + 60vw);
+
+    img {
+      width: 100%;
+    }
+  }
+}

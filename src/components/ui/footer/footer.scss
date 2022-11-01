@@ -1,0 +1,72 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.footer-container {
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+  margin-top: 4rem;
+  background-color: $dark-blue-color;
+  color: $lighter-gray-color;
+
+  h5 {
+    color: rgba(255, 255, 255, 0.452);
+    text-align: center;
+    padding-top: 1rem;
+    font-size: $card-desc-font;
+    font-weight: 400;
+    border-top: 1px rgba(255, 255, 255, 0.452) solid;
+  }
+
+  .footer-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-size: $largest-fonts;
+
+      span:last-child {
+        color: $btn-green-color;
+      }
+    }
+
+    h4 {
+      font-size: $x-large-fonts;
+      margin-bottom: 1rem;
+    }
+
+    .contact-cont {
+      .contact-icons {
+        div {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+
+          svg {
+            width: 25px;
+            height: 35px;
+          }
+
+          small {
+            font-size: $card-desc-font;
+          }
+        }
+      }
+    }
+
+    .follow-cont {
+      div {
+        display: flex;
+        column-gap: 1rem;
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
