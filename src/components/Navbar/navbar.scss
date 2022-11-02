@@ -8,15 +8,7 @@
   height: 80px;
   overflow: visible;
   position: relative;
-}
-
-.nav-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40%;
-  height: 150px;
-  z-index: 1;
+  z-index: 5;
 }
 
 .navbar-wrapper {
@@ -76,6 +68,7 @@
       display: flex;
       column-gap: 10px;
       padding: 0 1rem;
+      cursor: pointer;
 
       img {
         width: 45px;
@@ -114,15 +107,13 @@
       div {
         background-color: $lighter-gray-color;
         padding: 30px 0;
+        display: grid;
+        row-gap: 15px;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 
         button {
           width: 130px;
           height: 35px;
-          background-color: $white-color;
-          border-radius: 5px;
-          border: 1px rgba(0, 0, 0, 0.2) solid;
-          color: $dark-blue-color;
           margin: auto;
         }
       }

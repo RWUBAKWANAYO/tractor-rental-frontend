@@ -6,7 +6,7 @@ import {
   LinkedinIcon,
   PhoneIcon,
   TwitterIcon,
-} from '../../../assets/svg/MediaIcons';
+} from '../../assets/svg';
 import './footer.scss';
 
 const Footer = () => (

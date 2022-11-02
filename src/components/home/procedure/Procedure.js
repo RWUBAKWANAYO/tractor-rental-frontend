@@ -3,7 +3,7 @@ import ProcedureData from './PrcedureData';
 import './procedure.scss';
 import bg from '../../../assets/images/bg2.png';
 import icon1 from '../../../assets/images/icon1.png';
-import ArrowLeft from '../../../assets/svg/ArrowLeft';
+import { ArrowLeft } from '../../../assets/svg';
 
 const Procedure = () => (
   <div className="procedure-cont">

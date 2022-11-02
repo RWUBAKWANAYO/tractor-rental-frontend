@@ -1,13 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Layout from './components/Layout';
 import Home from './pages/Home';
+import Login from './pages/Login';
 
 const App = () => (
   <BrowserRouter>
-    <Navbar />
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route exact path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+      <Route exact path="/login" element={<Login />} />
     </Routes>
   </BrowserRouter>
 );

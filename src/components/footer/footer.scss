@@ -1,12 +1,12 @@
-@import "../../../assets/styles/colors.scss";
-@import "../../../assets/styles/fonts.scss";
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
 
 .footer-container {
   width: 100%;
   padding: 1rem 0;
   position: relative;
-  margin-top: 4rem;
-  background-color: $dark-blue-color;
+  margin-top: 8rem;
+  background-color: $dark-green-color;
   color: $lighter-gray-color;
 
   h5 {

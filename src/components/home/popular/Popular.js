@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowLeft from '../../../assets/svg/ArrowLeft';
+import { ArrowLeft } from '../../../assets/svg';
 import TractorCard from '../../tractorcard/TractorCard';
 import bg from '../../../assets/images/bg3.png';
 import './popular.scss';

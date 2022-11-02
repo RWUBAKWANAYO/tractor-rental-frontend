@@ -1,12 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.scss';
-import bg1 from '../../assets/images/bg1.png';
-import Button from '../ui/buttons/Button';
+import { ColoredButton, LightButton } from '../ui/buttons';
 
 const Navbar = () => (
   <nav className="navbar-cont">
-    <img src={bg1} alt="bg" className="nav-bg" />
     <div className="navbar-wrapper">
       <h1>
         <span>Tractor</span>
@@ -19,8 +17,8 @@ const Navbar = () => (
         </ul>
 
         <div className="navbar-account">
-          <button type="button" className="login-btn">Login</button>
-          {/* <div className="navbar-account-cont">
+          {/* <button type="button" className="login-btn">Login</button> */}
+          <div className="navbar-account-cont">
             <div className="navbar-account-prof">
               <img src="https://img.freepik.com/free-photo/portrait-dark-skinned-cheerful-woman-with-curly-hair-touches-chin-gently-laughs-happily-enjoys-day-off-feels-happy-enthusiastic-hears-something-positive-wears-casual-blue-turtleneck_273609-43443.jpg?w=2000" alt="user profile" />
               <span>
@@ -28,8 +26,14 @@ const Navbar = () => (
                 <small>Welcome back!</small>
               </span>
             </div>
-            <div className="navbar-account-btn"><div><Button name="Logout" /></div></div>
-          </div> */}
+            <div className="navbar-account-btn">
+              <div>
+                <ColoredButton name="Logout" />
+                <LightButton name="Logout" />
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>

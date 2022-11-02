@@ -6,6 +6,15 @@
   margin-top: 100px;
   position: relative;
   z-index: 2;
+
+  .hero-bg {
+    position: absolute;
+    top: -180px;
+    left: 0;
+    width: 40%;
+    height: 150px;
+    z-index: 1;
+  }
 }
 
 .hero-wrapper {
@@ -37,6 +46,8 @@
 
     button {
       margin-top: 1rem;
+      width: 150px;
+      height: 40px;
     }
   }
 

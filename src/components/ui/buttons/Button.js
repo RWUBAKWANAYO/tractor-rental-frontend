@@ -1,8 +1,14 @@
 import React from 'react';
 import './buttons.scss';
 
-const Button = ({ name }) => (
-  <button type="button" className="common-btn">{name}</button>
+export const LightButton = ({ name }) => (
+  <button type="button" className="light-btn">{name}</button>
 );
 
-export default Button;
+export const CurvedButton = ({ name }) => (
+  <button type="button" className="curved-btn">{name}</button>
+);
+
+export const ColoredButton = ({ name }) => (
+  <button type="button" className="colored-btn">{name}</button>
+);
