@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 const Layout = () => (
   <>
     <Navbar />
-    <Outlet />
+    <section><Outlet /></section>
     <Footer />
   </>
 );

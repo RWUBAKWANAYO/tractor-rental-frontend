@@ -1,10 +1,11 @@
 import React from 'react';
-import { ArrowLeft } from '../../../assets/svg';
-import TractorCard from '../../tractorcard/TractorCard';
-import bg from '../../../assets/images/bg3.png';
-import './popular.scss';
+import './tractorslist.scss';
+import TractorCard from '../../../../components/tractorcard/TractorCard';
+import bg from '../../../../assets/images/bg3.png';
+import SearchTractor from './SearchTractor';
+import FilterTractor from '../../FilterTractor/FilterTractor';
 
-const Popular = () => {
+const TractorsList = () => {
   const tractors = [
     {
       id: 1, name: 'John Dreel', image_url: 'tractor', rent: 5, description: 'printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the',
@@ -36,18 +37,23 @@ const Popular = () => {
   ];
 
   return (
-    <div className="popular-cont">
-      <img src={bg} alt="svg" className="popular-bg" />
-      <h1>Most popular</h1>
-
-      <div className="popular-cards-cont">
-        <div className="popular-arrow">
-          <ArrowLeft color="#1f675e" />
-        </div>
-        {tractors.slice(0, 4).map((tractor) => <TractorCard key={tractor.id} tractor={tractor} />)}
+    <div className="list-cont">
+      <div>
+        <SearchTractor />
+        <FilterTractor />
+      </div>
+      <div className="list-cards-cont">
+        {tractors.map((tractor) => (
+          <div
+            className="list-card"
+            key={tractor.id}
+          >
+            <TractorCard tractor={tractor} />
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Popular;
+export default TractorsList;

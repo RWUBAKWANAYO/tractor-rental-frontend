@@ -12,6 +12,10 @@ body {
   background-color: $lighter-gray-color;
   color: $dark-blue-color;
 }
+section{
+  width: 100%;
+  min-height: 50vh;
+}
 
 button {
   all: unset;

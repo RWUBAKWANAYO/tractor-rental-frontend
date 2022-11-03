@@ -3,9 +3,8 @@
 
 .tractor-card {
   width: calc(100% - 2rem);
-  height: 100%;
   border: 1px $btn-green-color solid;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -14,7 +13,7 @@
   row-gap: 1rem;
 
   img {
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 90%;
   }
 
@@ -32,6 +31,7 @@
     font-size: $large-fonts;
     font-weight: 500;
     color: $btn-green-color;
-    margin-bottom: 3rem;
+   
   }
 }
+
