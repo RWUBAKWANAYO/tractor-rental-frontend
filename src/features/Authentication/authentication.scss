@@ -33,6 +33,7 @@
         font-size: $medium-fonts;
         a {
           color: $btn-green-color;
+          margin-left: 5px;
         }
       }
 
@@ -120,16 +121,16 @@
   }
 }
 
-.auth-bg {
+.auth-img {
   position: relative;
-  .stars-bg {
+  .stars-img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
   }
-  .curves-bg {
+  .curves-img {
     height: 100%;
     width: 100%;
   }

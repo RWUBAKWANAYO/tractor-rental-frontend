@@ -1,0 +1,51 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+.list-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .tractors-list-bar{
+    width: 80%;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: $lighter-gray-color;
+    z-index: 5;
+    margin-bottom: 2rem;
+    
+  }
+
+  .list-cards-cont {
+    width: calc(80% - 20px);
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2rem;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+
+    .list-card {
+      cursor: pointer;
+      height: calc(100% - 5px);
+
+      .tractor-card{
+        border: 1px rgba(0, 0, 0, 0.2) solid;
+      border-radius: 10px;
+      height: calc(100% - 4rem);
+      }
+    }
+    .list-card:hover{
+
+      .tractor-card{
+        box-shadow: 0 0 10px 5px rgba(36, 36, 36, 0.1);
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}

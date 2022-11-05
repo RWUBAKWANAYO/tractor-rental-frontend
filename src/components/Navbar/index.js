@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.scss';
-import { ColoredButton, LightButton } from '../ui/buttons';
+import Button from '../ui/Button';
 
 const Navbar = () => (
   <nav className="navbar-cont">
@@ -28,8 +28,8 @@ const Navbar = () => (
             </div>
             <div className="navbar-account-btn">
               <div>
-                <ColoredButton name="Logout" />
-                <LightButton name="Logout" />
+                <Button name="Logout" styleclass="colored-btn" />
+                <Button name="Logout" styleclass="light-btn" />
               </div>
 
             </div>

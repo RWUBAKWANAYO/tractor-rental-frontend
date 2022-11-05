@@ -1,16 +1,19 @@
 import React from 'react';
 import '../features/Authentication/authentication.scss';
-import { AuthLinks, SignupForm } from '../features/Authentication';
-import AuthBackground from '../features/Authentication/components/AuthBackground';
+import { NavLink } from 'react-router-dom';
+import { AuthImage, SignupForm } from '../features/Authentication';
 
 const Signup = () => (
   <div className="auth-cont">
     <div className="auth-wrapper">
-      <AuthBackground />
+      <AuthImage />
       <div className="forms-cont">
         <h1>Sign up</h1>
         <SignupForm />
-        <AuthLinks name="Login" />
+        <small className="auth-links">
+          arleady have account?
+          <NavLink to="/login">Login</NavLink>
+        </small>
       </div>
 
     </div>

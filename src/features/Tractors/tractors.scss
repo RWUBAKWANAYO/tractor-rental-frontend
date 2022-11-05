@@ -1,0 +1,35 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+.search-tractor-cont{
+width: 300px;
+padding: 0 15px;
+border-radius: 30px;
+border: 1px $btn-green-color solid;
+position: relative;
+height: 35px;
+
+svg{
+  width: 20px;
+  height: 100%;
+  
+}
+input{
+  width: calc(100% - 55px);
+  font-size: $medium-fonts;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 45px;
+  height: 100%;
+  
+}
+}
+
+.filter-tractor-cont{
+  svg{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}

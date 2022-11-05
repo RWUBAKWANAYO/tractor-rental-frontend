@@ -1,0 +1,115 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.new-rental-cont {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  // background-color: rgba(31, 103, 95, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: flex-end;
+  // align-items: center;
+  // background-color: $lighter-gray-color;
+  // width: 100%;
+
+  .new-rental-wrapper {
+    // border-radius: 20px;
+    overflow: auto;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(450px - 4rem);
+    height: calc(100% - 120px);
+    // margin-top: 80px;
+    padding: 120px 2rem 0 2rem;
+    background-color: $lighter-gray-color;
+    i{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.1);
+      border-left: 1px solid #0000001a;
+      border-bottom: 1px solid #0000001a;
+      svg{
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    h1 {
+      font-size: $x-larger-fonts;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    p {
+      font-size: $medium-fonts;
+      font-weight: 400;
+opacity: 0.8;
+      text-align: center;
+    }
+  }
+}
+
+.rent-form-cont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 1rem;
+  margin-top: 2rem;
+
+
+
+  h2 {
+    text-align: center;
+    font-size: $larger-fonts;
+    font-weight: 400;
+  }
+  label {
+    color: $dark-green-color;
+    font-size: $medium-fonts;
+    font-weight: 500;
+  }
+  input {
+    color: $dark-blue-color;
+    font-weight: 500;
+    height: 40px;
+    border: 1px $dark-green-color solid;
+    border-radius: 8px;
+    margin-top: 5px;
+    padding: 0 10px;
+    background-color: transparent;
+  }
+
+  .size-in-meter {
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+    input {
+      width: calc(100% - 20px);
+    }
+  }
+
+  .size-in-hectare {
+    width: calc(100% - 20px);
+  }
+
+  .rent-calculate {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: $dark-green-color;
+    color: $white-color;
+    font-size: $large-fonts;
+    margin: 2rem 0 1rem 0;
+  }
+}
