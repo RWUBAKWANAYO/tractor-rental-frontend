@@ -1,7 +1,116 @@
-@import './colors.scss';
-@import './fonts.scss';
+@import "./colors.scss";
+@import "./fonts.scss";
 
-.my-rent{
-  border: 1px red dashed;
- 
+.my-rent {
+  width: 80%;
+  padding: 2rem 10%;
+  display: flex;
+  column-gap: 0.7rem;
+
+  .my-rent-list {
+    width: calc(100% - 280px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.7rem;
+    height: fit-content;
+  }
+  .rent-card {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-color;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    div {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      img {
+        height: 45px;
+        width: 45px;
+        // padding: 5px;
+        border-radius: 3px;
+        object-fit: cover;
+        background-color: rgba(31, 103, 95, 0.1);
+      }
+
+      span {
+        h3 {
+          font-size: $large-fonts;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: $medium-fonts;
+          font-weight: 400;
+          line-height: 1.2;
+          opacity: 0.8;
+        }
+      }
+    }
+    h1 {
+      font-size: $x-large-fonts;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      sup {
+        font-size: $small-fonts;
+      }
+    }
+    button{
+      height: 35px;
+      width: 90px;
+      border-color: $btn-green-color;
+      color: $btn-green-color;
+    }
+  }
+
+  .my-rent-desc {
+    position: sticky;
+    height: calc(100vh - 4rem);
+    top: 2rem;
+    left: 0;
+
+    .my-rent-desc-cont {
+      background-color: $white-color;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      width: 280px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow-x: hidden;
+
+      img {
+        width: 100%;
+        background-color: rgba(31, 103, 95, 0.1);
+      }
+      div {
+        padding: 20px;
+
+        h3 {
+          font-size: $large-fonts;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+
+        ul{
+          li{
+            font-size: $medium-fonts;
+            font-weight: 400;
+            line-height: 1.3;
+          }
+        }
+        hr{
+          border: none;
+          height: 1px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.1);
+          margin: 20px 0;
+        }
+      }
+    }
+  }
 }
