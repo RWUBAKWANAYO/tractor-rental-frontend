@@ -1,30 +1,35 @@
 import React from 'react';
-import './rent.scss';
 
-const RentForm = () => (
-  <form className="rent-form-cont">
-    <div className="size-in-meter">
-      <label htmlFor="width">
-        Width in meter(m)
-        <input type="number" className="normal-input" />
+const RentForm = ({ ShowSaveRent }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    ShowSaveRent();
+  };
+  return (
+    <form className="rent-form-cont" onSubmit={handleSubmit}>
+      <div className="size-in-meter">
+        <label htmlFor="width">
+          Width in meter(m)
+          <input type="number" className="normal-input" />
+        </label>
+
+        <label htmlFor="height">
+          Height in meter(m)
+          <input type="number" className="normal-input" />
+        </label>
+      </div>
+
+      <h2>Or</h2>
+
+      <label htmlFor="hectare">
+        Use Hectare instead
+        <input type="number" className="size-in-hectare" />
       </label>
 
-      <label htmlFor="height">
-        Height in meter(m)
-        <input type="number" className="normal-input" />
-      </label>
-    </div>
+      <button type="submit" className="rent-calculate">PROCEED</button>
 
-    <h2>Or</h2>
-
-    <label htmlFor="hectare">
-      Use Hectare instead
-      <input type="number" className="size-in-hectare" />
-    </label>
-
-    <button type="submit" className="rent-calculate">PROCEED</button>
-
-  </form>
-);
+    </form>
+  );
+};
 
 export default RentForm;

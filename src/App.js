@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import MyRent from './pages/MyRent';
 import Signup from './pages/Signup';
 import TractorDetails from './pages/TractorDetails';
 import TractorsList from './pages/TractorsList';
@@ -14,6 +15,7 @@ const App = () => (
         <Route index element={<Home />} />
         <Route exact path="/tractors" element={<TractorsList />} />
         <Route exact path="/tractors/:tractorId" element={<TractorDetails />} />
+        <Route exact path="/myrent" element={<MyRent />} />
       </Route>
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />

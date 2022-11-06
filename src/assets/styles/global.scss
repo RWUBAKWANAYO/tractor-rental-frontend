@@ -14,7 +14,7 @@ body {
 }
 section{
   width: 100%;
-  min-height: 70vh;
+  min-height: calc(100vh - 440px);
 }
 
 button {
