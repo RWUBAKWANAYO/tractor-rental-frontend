@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/home.scss';
 import heroBg from '../assets/images/bg1.png';
-import heroimg from '../assets/images/hero-img.png';
+import heroimg from '../assets/images/test1.png';
 import procedureBg from '../assets/images/bg2.png';
 import popularBg from '../assets/images/bg3.png';
 import Button from '../components/ui/Button';
@@ -17,10 +17,7 @@ const Home = () => (
       <img src={heroBg} alt="bg" className="hero-bg" />
       <div className="hero-wrapper">
         <div className="hero-desc">
-          <h1>
-            <span>Welcome to </span>
-            TractorRental
-          </h1>
+          <h1>TractorRental</h1>
           <p>
             is simply dummy text of the printing and typesetting industry. Lorem
             Ipsum has been the industrys standard dummy text ever since the

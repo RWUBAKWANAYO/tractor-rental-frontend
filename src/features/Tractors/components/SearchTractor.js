@@ -4,8 +4,14 @@ import { SearchIcon } from '../../../assets/svg';
 
 const SearchTractor = () => (
   <div className="search-tractor-cont">
-    <input type="search" placeholder="Search tractor by name" />
-    <SearchIcon color="#abbc41" />
+    Search by name
+    <label htmlFor="name">
+      <div>
+        <SearchIcon color="#abbc41" />
+        <input type="search" placeholder="example:john deere..." />
+        <button type="button">Apply</button>
+      </div>
+    </label>
   </div>
 );
 

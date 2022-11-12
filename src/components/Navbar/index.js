@@ -17,8 +17,8 @@ const Navbar = () => (
         </ul>
 
         <div className="navbar-account">
-          {/* <button type="button" className="login-btn">Login</button> */}
-          <div className="navbar-account-cont">
+          <button type="button" className="login-btn">Login</button>
+          {/* <div className="navbar-account-cont">
             <div className="navbar-account-prof">
               <img src="https://img.freepik.com/free-photo/portrait-dark-skinned-cheerful-woman-with-curly-hair-touches-chin-gently-laughs-happily-enjoys-day-off-feels-happy-enthusiastic-hears-something-positive-wears-casual-blue-turtleneck_273609-43443.jpg?w=2000" alt="user profile" />
               <span>
@@ -33,7 +33,7 @@ const Navbar = () => (
               </div>
 
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

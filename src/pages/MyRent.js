@@ -46,10 +46,6 @@ const MyRent = () => (
               Daily completion:
               10 hectare
             </li>
-            <li>
-              Size of the land:
-              600m - 100m
-            </li>
           </ul>
           <hr />
           <h3>Rent Info</h3>

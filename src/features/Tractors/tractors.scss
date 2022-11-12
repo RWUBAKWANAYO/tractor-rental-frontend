@@ -1,35 +1,80 @@
-@import '../../assets/styles/colors.scss';
-@import '../../assets/styles/fonts.scss';
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
 
-.search-tractor-cont{
-width: 300px;
-padding: 0 15px;
-border-radius: 30px;
-border: 1px $btn-green-color solid;
-position: relative;
-height: 35px;
+.search-tractor-cont {
+  div {
+    input {
+        height: 100%;
+        width: 220px;
+        background-color: transparent;
+        margin: 0 5px;
+        padding: 0 5px;
+        
+    }
+    svg{
+      margin-left: 12px;
+      width: 19px;
+      height: 19px;
 
-svg{
-  width: 20px;
-  height: 100%;
-  
+    }
+  }
 }
-input{
-  width: calc(100% - 55px);
+
+.filter-tractor-cont {
+  div {
+    hr {
+      border: none;
+      width: 1px;
+      height: 60%;
+      background-color: $btn-green-color;
+    }
+    input {
+      height: 100%;
+      max-width: 100px;
+      text-align: center;
+      background-color: transparent;
+      margin: 0 5px;
+    }
+    svg{
+      margin-left: 10px;
+      width: 18px;
+      height: 17px;
+    }
+  }
+}
+.search-tractor-cont,
+.filter-tractor-cont {
   font-size: $medium-fonts;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 45px;
-  height: 100%;
-  
-}
+
+  div {
+    border: 1px $btn-green-color solid;
+    overflow: hidden;
+    margin-top: 5px;
+    height: 32px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+    button {
+      height: 100%;
+      padding: 0 15px;
+      background-color: $btn-green-color;
+      color: $lighter-gray-color;
+    }
+  }
 }
 
-.filter-tractor-cont{
+.clear-tractors-filters{
+  height: 35px;
+  width: 100px;
+  background-color: $btn-green-color;
+  color: $white-color;
+  border-radius: 5px;
+  font-size: $medium-fonts;
+  // border: 1px $btn-green-color solid;
   svg{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+// 
+    height: 20px;
+    margin-right: 10px;
   }
 }

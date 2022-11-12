@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/tractorslist.scss';
 import { TractorCard } from '../components/ui/Card';
-import { SearchTractor, FilterTractor } from '../features/Tractors';
+import { SearchTractor, FilterTractor, ClearFilters } from '../features/Tractors';
 
 const TractorsList = () => {
   const tractors = [
@@ -39,6 +39,7 @@ const TractorsList = () => {
       <div className="tractors-list-bar">
         <SearchTractor />
         <FilterTractor />
+        <ClearFilters />
       </div>
       <div className="list-cards-cont">
         {tractors.map((tractor) => (

@@ -21,20 +21,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 5%;
+    column-gap: 2%;
   
     .hero-desc {
       display: flex;
       flex-direction: column;
       row-gap: 0.5rem;
+      width: 600px;
   
       h1 {
         font-size: $largest-fonts;
-        font-weight: 500;
-  
-        span {
-          font-size: $larger-fonts;
-        }
+        font-weight: 900;
+
       }
   
       p {
@@ -50,7 +48,7 @@
     }
   
     .hero-img {
-      width: calc(500px + 60vw);
+      // width: calc(500px + 60vw);
   
       img {
         width: 100%;
