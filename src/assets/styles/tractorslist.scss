@@ -22,7 +22,7 @@
   }
 
   .list-cards-cont {
-    width: calc(80% - 10px);
+    width: 80%;
     height: auto;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -38,7 +38,8 @@
       .tractor-card{
         border: 1px rgba(0, 0, 0, 0.2) solid;
       border-radius: 10px;
-      height: calc(100% - 4rem);
+      height: 100%;
+      width: 100%;
       }
     }
     .list-card:hover{

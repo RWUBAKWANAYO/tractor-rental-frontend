@@ -40,6 +40,11 @@
       font-size: $paragraph-font;
       line-height: 1.5;
     }
+    h5{
+      font-size: $medium-fonts;
+      font-weight: 500;
+      margin-top: 10px;
+    }
     .details-warning{
       width: calc(100% - 40px);
       padding: 15px 20px;

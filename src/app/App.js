@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import MyRent from './pages/MyRent';
-import Signup from './pages/Signup';
-import TractorDetails from './pages/TractorDetails';
-import TractorsList from './pages/TractorsList';
+import Layout from '../Layout';
+import Home from '../pages/Home';
+import Login from '../pages/Login';
+import MyRent from '../pages/MyRent';
+import Signup from '../pages/Signup';
+import TractorDetails from '../pages/TractorDetails';
+import TractorsList from '../pages/TractorsList';
 
 const App = () => (
   <BrowserRouter>

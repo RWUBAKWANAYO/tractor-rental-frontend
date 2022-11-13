@@ -4,27 +4,30 @@
 .tractor-card {
   width: calc(100% - 2rem);
   border: 1px $btn-green-color solid;
-  padding: 2rem 1rem;
+  // padding: 2rem 1rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   row-gap: 1rem;
+  overflow: hidden;
 
   img {
     width: 100%;
-    max-height: 180px;
+    // max-height: 180px;
   }
 
   h4 {
     font-size: $large-fonts;
+    width: calc(100% - 2rem);
   }
 
   p {
     font-size: $card-desc-font;
     font-weight: 400;
     line-height: 1.4;
+    width: calc(100% - 2rem);
   }
 
   small {
@@ -32,6 +35,8 @@
     font-weight: 500;
     color: $btn-green-color;
    text-align: center;
+   margin-bottom: 2rem;
+   width: calc(100% - 2rem);
   }
 }
 
