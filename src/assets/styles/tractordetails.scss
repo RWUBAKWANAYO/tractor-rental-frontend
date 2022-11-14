@@ -78,3 +78,36 @@
     }
   }
 }
+
+@media(max-width:1024px){
+  .tractor-details-cont{
+    width: 80%;
+    // grid-template-columns: 2fr 1fr;
+    margin-top: 2rem;
+    grid-gap: 1rem;
+  
+    .tractor-details-img{
+  
+      img{
+        width: 100%;
+      }
+    }
+    .tractor-details-desc{
+      row-gap: 1rem;
+    }
+  }
+}
+
+@media(max-width:820px){
+  .tractor-details-cont{
+    grid-template-columns:1fr;
+  }
+  .tractor-details-desc{
+    row-gap: 1.5rem;
+  }
+}
+@media(max-width:768px){
+  .tractor-details-cont{
+    width: 90%;
+  }
+}

@@ -5,7 +5,7 @@
   width: 100%;
   padding: 1rem 0;
   position: relative;
-  margin-top: 8rem;
+  margin-top: 8vw;
   background-color: $dark-green-color;
   color: $lighter-gray-color;
   position: relative;
@@ -67,6 +67,86 @@
         svg {
           width: 30px;
           height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1024px){
+  .footer-container{
+    .footer-wrapper{
+      .contact-cont {
+        .contact-icons {
+          div {
+            column-gap: 10px;
+  
+            svg {
+              width: 25px;
+              height: 35px;
+            }
+          }
+        }
+      }
+  
+      .follow-cont {
+        div {
+          column-gap: 1rem;
+  
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:820px){
+  .footer-container{
+    margin-top: 6rem;
+    .footer-wrapper{
+      width: 90%;
+    }
+  }
+}
+
+@media(max-width:600px){
+  .footer-container{
+    h5{
+      font-size: $medium-fonts;
+    }
+    .footer-wrapper{
+      width: fit-content;
+      flex-direction: column;
+
+      row-gap: 2rem;
+
+      h1 {
+        font-size: $largest-fonts;
+      }
+      h4 {
+        font-size: $larger-fonts;
+        font-weight: 400;
+        margin-bottom: 0.2rem;
+      }
+
+      .contact-cont {
+        .contact-icons {
+          div {
+            small {
+              font-size: $large-fonts;
+            }
+          }
+        }
+      }
+  
+      .follow-cont {
+        div {
+          svg {
+           margin-top: 0.2rem;
+          }
         }
       }
     }

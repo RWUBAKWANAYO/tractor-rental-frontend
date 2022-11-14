@@ -4,18 +4,16 @@
 .search-tractor-cont {
   div {
     input {
-        height: 100%;
-        width: 220px;
-        background-color: transparent;
-        margin: 0 5px;
-        padding: 0 5px;
-        
+      height: 100%;
+      width: calc(100% - 19px);
+      background-color: transparent;
+      margin: 0 5px;
+      padding: 0 5px;
     }
-    svg{
+    svg {
       margin-left: 12px;
       width: 19px;
       height: 19px;
-
     }
   }
 }
@@ -30,22 +28,22 @@
     }
     input {
       height: 100%;
-      max-width: 100px;
+      width: calc(50% - 9px);
       text-align: center;
       background-color: transparent;
       margin: 0 5px;
     }
-    svg{
+    svg {
       margin-left: 10px;
-      width: 18px;
-      height: 17px;
+      width: 12px;
+      height: 14px;
     }
   }
 }
 .search-tractor-cont,
 .filter-tractor-cont {
   font-size: $medium-fonts;
-
+  width: 50%;
   div {
     border: 1px $btn-green-color solid;
     overflow: hidden;
@@ -54,26 +52,62 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
+    width: 100%;
 
     button {
       height: 100%;
       padding: 0 15px;
       background-color: $btn-green-color;
       color: $lighter-gray-color;
+      font-size: $medium-fonts;
+    }
+    input::placeholder{
+      color: rgba(0,0,0,0.4);
     }
   }
 }
 
-.clear-tractors-filters{
+.popular-tractors-filters {
   height: 35px;
   width: 100px;
   background-color: $btn-green-color;
   color: $white-color;
   border-radius: 5px;
   font-size: $medium-fonts;
-  svg{
-
+  svg {
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+  }
+}
+.clear-tractors-filters {
+  height: 35px;
+  width: 100px;
+  background-color: $dark-green-color;
+  color: $white-color;
+  border-radius: 5px;
+  font-size: $medium-fonts;
+  svg {
     height: 20px;
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .popular-tractors-filters,
+  .clear-tractors-filters {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .search-tractor-cont ,
+  .filter-tractor-cont{
+    width: 100%;
+  }
+  .popular-tractors-filters,
+  .clear-tractors-filters {
+    width: 100%;
   }
 }

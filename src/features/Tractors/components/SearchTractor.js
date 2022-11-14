@@ -9,13 +9,11 @@ const SearchTractor = () => {
   return (
     <div className="search-tractor-cont">
       Search by name
-      <label htmlFor="name">
-        <div>
-          <SearchIcon color="#abbc41" />
-          <input type="search" placeholder="example:john deere..." />
-          <button type="button">Apply</button>
-        </div>
-      </label>
+      <div>
+        <SearchIcon color="#abbc41" />
+        <input type="search" placeholder="example:john deere..." />
+        <button type="button">Apply</button>
+      </div>
     </div>
   );
 };

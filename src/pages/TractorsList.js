@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import '../assets/styles/tractorslist.scss';
-import { ClearFilterIcon } from '../assets/svg';
+import { ClearFilterIcon, TrendIcon } from '../assets/svg';
 import { TractorCard } from '../components/ui/Card';
 import { SearchTractor, FilterTractor } from '../features/Tractors';
 import { FetchAllTractors } from '../features/Tractors/services';
 
 const TractorsList = () => {
+  const navigate = useNavigate();
+  const handleClick = (id) => navigate(`/tractors/${id}`);
   const dispatch = useDispatch();
   const tractors = useSelector((state) => state.alltractors);
   const [result, setResult] = useState(tractors);
@@ -19,16 +22,31 @@ const TractorsList = () => {
       { result.status === 'ok-exist' && (
       <div className="list-cont">
         <div className="tractors-list-bar">
-          <SearchTractor />
-          <FilterTractor />
-          <button type="button" className="clear-tractors-filters">
-            <ClearFilterIcon color="#fafbfa" />
-            Reset
-          </button>
+          <div className="list-filter-inputs">
+            <SearchTractor />
+            <FilterTractor />
+          </div>
+          <div className="list-filter-buttons">
+            <button type="button" className="popular-tractors-filters">
+              <TrendIcon color="#fafbfa" />
+              Popular
+            </button>
+
+            <button type="button" className="clear-tractors-filters">
+              <ClearFilterIcon color="#fafbfa" />
+              Reset
+            </button>
+          </div>
+
         </div>
         <div className="list-cards-cont">
           {result.data.map((tractor) => (
-            <div className="list-card" key={tractor.id}>
+            <div
+              className="list-card"
+              key={tractor.id}
+              onClick={() => handleClick(tractor.id)}
+              aria-hidden="true"
+            >
               <TractorCard tractor={tractor} />
             </div>
           ))}

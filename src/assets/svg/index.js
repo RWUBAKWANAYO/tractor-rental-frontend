@@ -8,3 +8,4 @@ export { default as WarningIcon } from './WarningIcon';
 export { default as CrossIcon } from './CrossIcon';
 export { default as MoneyIcon } from './MoneyIcon';
 export { default as ClearFilterIcon } from './ClearFilterIcon';
+export { default as TrendIcon } from './TrendIcon';

@@ -7,18 +7,23 @@
   flex-direction: column;
   align-items: center;
 
-  .tractors-list-bar{
+  .tractors-list-bar {
     width: 80%;
-    padding: 1rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    position: sticky;
-    top: 0;
     background-color: $lighter-gray-color;
-    z-index: 5;
     margin-bottom: 2rem;
-    
+
+    .list-filter-inputs {
+      width: 70%;
+    }
+
+    .list-filter-inputs,
+    .list-filter-buttons {
+      display: flex;
+      column-gap: 1rem;
+    }
   }
 
   .list-cards-cont {
@@ -26,28 +31,69 @@
     height: auto;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 2rem;
+    grid-gap: 2vw;
     margin: auto;
-    position: relative;
-    z-index: 2;
 
     .list-card {
       cursor: pointer;
-      height: calc(100% - 5px);
-
-      .tractor-card{
+      .tractor-card {
         border: 1px rgba(0, 0, 0, 0.2) solid;
-      border-radius: 10px;
-      height: 100%;
-      width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
       }
     }
-    .list-card:hover{
-
-      .tractor-card{
+    .list-card:hover {
+      .tractor-card {
         box-shadow: 0 0 10px 5px rgba(36, 36, 36, 0.1);
         transition: 0.2s ease-in-out;
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .list-cont {
+    .tractors-list-bar {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      row-gap: 1rem;
+
+      .list-filter-inputs,
+      .list-filter-buttons {
+        width: 100%;
+      }
+    }
+
+    .list-cards-cont {
+      grid-template-columns: auto auto auto;
+      grid-gap: 3vw;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .list-cont {
+    .tractors-list-bar {
+      width: 90%;
+    }
+    .list-cards-cont {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .list-cont {
+    .list-filter-inputs,
+    .list-filter-buttons {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+    .list-cards-cont {
+      grid-template-columns: auto auto;
+      grid-gap: 4vw;
     }
   }
 }
