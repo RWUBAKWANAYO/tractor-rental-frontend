@@ -61,8 +61,8 @@
       color: $lighter-gray-color;
       font-size: $medium-fonts;
     }
-    input::placeholder{
-      color: rgba(0,0,0,0.4);
+    input::placeholder {
+      color: rgba(0, 0, 0, 0.4);
     }
   }
 }
@@ -83,7 +83,7 @@
 .clear-tractors-filters {
   height: 35px;
   width: 100px;
-  background-color: $dark-green-color;
+  background-color: $btn-green-color;
   color: $white-color;
   border-radius: 5px;
   font-size: $medium-fonts;
@@ -100,10 +100,9 @@
   }
 }
 
-
 @media (max-width: 600px) {
-  .search-tractor-cont ,
-  .filter-tractor-cont{
+  .search-tractor-cont,
+  .filter-tractor-cont {
     width: 100%;
   }
   .popular-tractors-filters,

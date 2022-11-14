@@ -8,18 +8,19 @@ const MyRent = () => (
     <div className="my-rent-list">
       {Array.from(Array(8).keys()).map((tractor) => (
         <div className="rent-card" key={tractor}>
-          <div>
-            <img src="https://cdn.britannica.com/13/100513-050-1DB2C84D/Tractor-loader.jpg" alt="tractor" />
-            <span>
-              <h3>John Dreller</h3>
-              <p>20 December 2022</p>
-            </span>
+          <div className="rent-card-cont">
+            <div>
+              <img src="https://cdn.britannica.com/13/100513-050-1DB2C84D/Tractor-loader.jpg" alt="tractor" />
+              <span>
+                <h3>John Dreller</h3>
+                <p>20 Dec 2022</p>
+              </span>
+            </div>
+            <h1>
+              <sup>RWF</sup>
+              85000
+            </h1>
           </div>
-
-          <h1>
-            <sup>RWF</sup>
-            85000
-          </h1>
           <Button name="view more" styleclass="light-btn" />
         </div>
       ))}
@@ -68,6 +69,7 @@ const MyRent = () => (
             </li>
           </ul>
         </div>
+        <div className="myrent-close-btn"><Button name="Close" styleclass="colored-btn" /></div>
       </div>
     </div>
   </div>
