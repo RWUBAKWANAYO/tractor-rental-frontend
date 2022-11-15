@@ -23,7 +23,7 @@ const SignupForm = () => {
           <input type="file" accept="image/*" onChange={(e) => setData({ ...data, picture: e.target.files[0] })} />
           <div>
             <small>{data.picture ? data.picture.name : ''}</small>
-            <PhotoIcon color="#1f675e" />
+            <PhotoIcon color="#192f51" />
           </div>
         </div>
       </label>
@@ -32,7 +32,7 @@ const SignupForm = () => {
         Password
         <div className="pswd-parent">
           <input type={lock ? 'text' : 'password'} />
-          <i onClick={() => setLock(!lock)} aria-hidden="true"><Eye color="#1f675e" /></i>
+          <i onClick={() => setLock(!lock)} aria-hidden="true"><Eye color="#192f51" /></i>
         </div>
       </label>
 

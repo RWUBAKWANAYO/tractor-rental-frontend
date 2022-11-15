@@ -135,3 +135,38 @@
     width: 100%;
   }
 }
+
+@media(max-width:820px){
+  .auth-cont{
+    .auth-wrapper{
+      .forms-cont{
+        width: calc(48vw - 4rem);
+      }
+    }
+  }
+
+}
+
+@media(max-width:768px){
+  .auth-cont{
+    justify-content: flex-start;
+    align-items: flex-start;
+    .auth-wrapper{
+      width: 100%;
+      flex-direction: column;
+      border-radius: 0;
+      .forms-cont{
+        width: calc(100% - 4rem);
+        min-height: calc(60vh - 4rem);
+      }
+      .auth-img{
+        width: 100%;
+        .curves-img{
+          height: 40vh;
+          width: 100%;
+          object-fit: fill;
+        }
+      }
+    }
+  }
+}

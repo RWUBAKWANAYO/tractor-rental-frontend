@@ -14,7 +14,7 @@ const LoginForm = () => {
         Password
         <div className="pswd-parent">
           <input type={lock ? 'text' : 'password'} />
-          <i onClick={() => setLock(!lock)} aria-hidden="true"><Eye color="#1f675e" /></i>
+          <i onClick={() => setLock(!lock)} aria-hidden="true"><Eye color="#192f51" /></i>
         </div>
       </label>
 

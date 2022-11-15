@@ -57,7 +57,7 @@
     button {
       height: 100%;
       padding: 0 15px;
-      background-color: $btn-green-color;
+      background-color: $light-blue-color;
       color: $lighter-gray-color;
       font-size: $medium-fonts;
     }
@@ -70,8 +70,8 @@
 .popular-tractors-filters {
   height: 35px;
   width: 100px;
-  background-color: $btn-green-color;
-  color: $white-color;
+  border: 1px solid $btn-green-color;
+  color: $light-blue-color;
   border-radius: 5px;
   font-size: $medium-fonts;
   svg {
@@ -83,8 +83,8 @@
 .clear-tractors-filters {
   height: 35px;
   width: 100px;
-  background-color: $btn-green-color;
-  color: $white-color;
+  border: 1px solid $btn-green-color;
+  color: $light-blue-color;
   border-radius: 5px;
   font-size: $medium-fonts;
   svg {

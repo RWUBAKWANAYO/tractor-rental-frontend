@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/tractorslist.scss';
-import { ClearFilterIcon, TrendIcon } from '../assets/svg';
+import { ArrowCircleIcon, ClearFilterIcon, TrendIcon } from '../assets/svg';
 import { TractorCard } from '../components/ui/Card';
 import { SearchTractor, FilterTractor } from '../features/Tractors';
 import { FetchAllTractors } from '../features/Tractors/services';
@@ -17,23 +17,32 @@ const TractorsList = () => {
   useEffect(() => { dispatch(FetchAllTractors()); }, []);
   useEffect(() => { setResult(tractors); }, [tractors]);
 
+  const [filters, setFilters] = useState(false);
+
   return (
     <>
       { result.status === 'ok-exist' && (
       <div className="list-cont">
-        <div className="tractors-list-bar">
+        <div className="filters-title">
+          <h2>Find Tractors by name, price, popularity.</h2>
+          <button type="button" onClick={() => setFilters(!filters)} aria-hidden="true">
+            Find now
+            <i style={{ transform: `${filters ? 'rotate(90deg)' : ''}` }}><ArrowCircleIcon /></i>
+          </button>
+        </div>
+        <div className="tractors-list-bar" style={{ display: `${filters ? 'flex' : ''}` }}>
           <div className="list-filter-inputs">
             <SearchTractor />
             <FilterTractor />
           </div>
           <div className="list-filter-buttons">
             <button type="button" className="popular-tractors-filters">
-              <TrendIcon color="#fafbfa" />
+              <TrendIcon color="#192f51" />
               Popular
             </button>
 
             <button type="button" className="clear-tractors-filters">
-              <ClearFilterIcon color="#fafbfa" />
+              <ClearFilterIcon color="#192f51" />
               Reset
             </button>
           </div>

@@ -11,7 +11,7 @@ const AccountCard = () => (
     <h4>Rwubakwanayo Olivier</h4>
     <small>rwubakwanayoolivier@gmail.com</small>
     <Link to="/myrent"><Button name="My Rent" styleclass="colored-btn" /></Link>
-    <Button name="Logout" styleclass="light-btn" />
+    <Button name="Logout" styleclass="blue-btn" />
   </div>
 );
 

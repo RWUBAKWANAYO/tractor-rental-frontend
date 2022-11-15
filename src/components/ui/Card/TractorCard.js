@@ -5,7 +5,7 @@ import TextMinimizer from '../../../utils/TextMinimizer';
 
 const TractorCard = ({ tractor }) => (
   <div className="tractor-card" id="main-card">
-    <img src={tractorimg} alt="tractor" />
+    <img src={tractor.image_url} alt="tractor" />
     <h4>{tractor.name}</h4>
     <p>9 heactare per day</p>
     <p>256 Peaple demanded</p>

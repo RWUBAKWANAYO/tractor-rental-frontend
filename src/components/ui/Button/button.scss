@@ -11,8 +11,13 @@
 .light-btn{
   background-color: $white-color;
   border-radius: 5px;
-  border: 1px rgba(0, 0, 0, 0.2) solid;
-  color: $dark-blue-color;
+  border: 1px $btn-green-color solid;
+  color: $dark-green-color;
+}
+.blue-btn{
+  background-color: $dark-blue-color;
+  border-radius: 5px;
+  color: $white-color;
 }
 
 .colored-btn{

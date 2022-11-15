@@ -67,12 +67,13 @@
         }
       }
     }
-    button {
-      height: 35px;
-      width: 90px;
-      border-color: $btn-green-color;
-      color: $btn-green-color;
-      font-size: $medium-fonts;
+
+    .myrent-open-btn {
+      button {
+        height: 35px;
+        width: 90px;
+        font-size: $medium-fonts;
+      }
     }
   }
 
@@ -179,8 +180,11 @@
             min-width: 60%;
           }
         }
-        button {
+        .myrent-open-btn {
           width: 100%;
+          button {
+            width: 100%;
+          }
         }
       }
     }
