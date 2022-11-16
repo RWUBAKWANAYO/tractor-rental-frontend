@@ -11,7 +11,7 @@
   backdrop-filter: blur(4px);
   display: flex;
   justify-content: flex-end;
-  i {
+  .rent-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -34,22 +34,15 @@
     overflow: auto;
     box-shadow: -4px 0 10px rgba(25, 47, 81, 0.1);
     width: calc(450px - 4rem);
-    height: calc(100% - 120px);
-    padding: 120px 2rem 0 2rem;
+    height: calc(100% - 2rem);
+    padding: 4rem 2rem 0 2rem;
     background-color: $lighter-gray-color;
-
 
     h1 {
       font-size: $x-larger-fonts;
       font-weight: 500;
       text-align: center;
-    }
-
-    p {
-      font-size: $medium-fonts;
-      font-weight: 400;
-      opacity: 0.8;
-      text-align: center;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -59,60 +52,142 @@
   display: grid;
   grid-template-columns: auto;
   row-gap: 1rem;
-  margin-top: 2rem;
+  color: $dark-green-color;
 
   h2 {
-    text-align: center;
-    font-size: $larger-fonts;
-    font-weight: 400;
-  }
-  label {
-    color: $dark-green-color;
-    font-size: $medium-fonts;
+    font-size: $card-desc-font;
     font-weight: 500;
   }
+
   input {
-    color: $dark-blue-color;
-    font-weight: 500;
-    height: 40px;
-    border: 1px $dark-green-color solid;
-    border-radius: 8px;
-    margin-top: 5px;
-    padding: 0 10px;
+    color: $dark-green-color;
+    height: 35px;
+    padding: 0 5px;
     background-color: transparent;
   }
 
-  .size-in-meter {
-    width: 100%;
-    display: grid;
+  .rent-form-size {
+    width: calc(100% - 2rem);
+    padding: 1rem 1rem 2rem 1rem;
+    border: 1px solid $dark-blue-color;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    grid-template-columns: auto auto;
-    column-gap: 10%;
-    input {
-      width: calc(100% - 20px);
+    h2{
+      position: absolute;
+      height: 20px;
+      top: -10px;
+      left: 50%;
+      transform: translate(-50%);
+      padding: 0 10px;
+      background-color: $lighter-gray-color;
+    }
+      h5 {
+        font-size: $card-desc-font;
+        font-weight: 500;
+        margin-top: 0;
+      }
+      b{
+        font-size: $larger-fonts;
+        font-weight: 400;
+        letter-spacing: -2px;
+        margin-top: 10px;
+      }
+      
+      .meter-size {
+        width: 100%;
+        
+        div {
+          display: flex;
+          width: 100%;
+          border: 1px rgba(25, 47, 81, 0.4) solid;
+          border-radius: 5px;
+          margin-top: 5px;
+
+          hr{
+            width: 1px;
+            height: 35px;
+            border: none;
+            background-color: rgba(25, 47, 81, 0.4);
+          }
+          input{
+            width: calc(50% - 10.5px);
+            text-align: center;
+            margin-top: 0;
+          }
+        }
+      }
+      .hectare-size{
+        width: 100%;
+        input{
+          border-radius: 5px;
+          border: 1px rgba(25, 47, 81, 0.4) solid;
+          width: calc(100% - 20px);
+          padding:0 10px;
+          margin-top: 5px;
+        }
+      }
+  }
+
+  .rent-form-checkbox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    i{
+      border: 1px solid $dark-blue-color;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg{
+        width: 70%;
+      }
+    }
+    h2{
+      margin-left: 10px;
     }
   }
 
-  .size-in-hectare {
-    width: calc(100% - 20px);
+  .rent-form-date{
+    width: 100%;
+    h5 {
+      font-size: $card-desc-font;
+      font-weight: 500;
+    }
+    input{
+      border-radius: 5px;
+      border: 1px $dark-green-color solid;
+      width: calc(100% - 20px);
+      padding:0 10px;
+      margin-top: 5px;
+      color: rgba(25, 47, 81, 0.4);
+    }
   }
+
 }
 
 .rent-calculate {
   width: 100%;
-  height: 50px;
+  height: 45px;
   border-radius: 8px;
   background-color: $dark-green-color;
   color: $white-color;
   font-size: $large-fonts;
-  margin: 2rem 0 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .save_rent {
   width: 100%;
   ul {
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0;
     li {
       display: flex;
       justify-content: space-between;
@@ -120,28 +195,28 @@
       border-bottom: 1px solid rgba(25, 47, 81, 0.2);
       font-size: $medium-fonts;
       font-weight: 400;
-      b{
+      b {
         font-weight: 400;
       }
     }
-
   }
-  h5{
+  h5 {
     font-size: $large-fonts;
     font-weight: 500;
     text-align: center;
     line-height: 1.5;
-    span{
-color: $btn-green-color;
-
+    margin: 2rem 0 1.5rem 0;
+    span {
+      color: $btn-green-color;
     }
   }
-  #total-rent{
+  #total-rent {
     font-size: $larger-fonts;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
-    small,sup{
+    small,
+    sup {
       font-size: $medium-fonts;
       font-weight: 500;
     }

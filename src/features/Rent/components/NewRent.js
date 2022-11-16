@@ -10,13 +10,9 @@ const NewRent = ({ ShowRent }) => {
 
   return (
     <div className="new-rental-cont">
-      <i onClick={() => ShowRent(false)} aria-hidden="true"><CrossIcon color="#1f675e" /></i>
+      <i className="rent-close" onClick={() => ShowRent(false)} aria-hidden="true"><CrossIcon color="#192f51" /></i>
       {visible && (
-      <div className="new-rental-wrapper">
-        <h1>Basic Information</h1>
-        <p>Please provide size of the land to get total cost</p>
-        <RentForm ShowSaveRent={ShowSaveRent} />
-      </div>
+      <div className="new-rental-wrapper"><RentForm ShowSaveRent={ShowSaveRent} /></div>
       )}
       {!visible && <div className="new-rental-wrapper"><SaveRent /></div>}
     </div>

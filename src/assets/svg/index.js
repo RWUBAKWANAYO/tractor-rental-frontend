@@ -9,3 +9,4 @@ export { default as CrossIcon } from './CrossIcon';
 export { default as MoneyIcon } from './MoneyIcon';
 export { default as ClearFilterIcon } from './ClearFilterIcon';
 export { default as TrendIcon } from './TrendIcon';
+export { default as CheckIcon } from './CheckIcon';

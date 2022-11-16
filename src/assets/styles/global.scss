@@ -39,3 +39,7 @@ li {
 a {
   text-decoration: none;
 }
+
+input::placeholder {
+  color: rgba(25, 47, 81, 0.4);
+}

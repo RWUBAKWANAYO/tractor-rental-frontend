@@ -10,7 +10,7 @@ import { RentalWarning } from '../data/Warning.constants';
 import tractorimg from '../assets/images/tractor_img.png';
 
 const TractorDetails = () => {
-  const [rent, setRent] = useState(false);
+  const [rent, setRent] = useState(true);
   const ShowRent = (bool) => setRent(bool);
   const { tractorId } = useParams();
 

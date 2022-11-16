@@ -1,4 +1,6 @@
 import React from 'react';
+import { CheckIcon } from '../../../assets/svg';
+import DateIcon from '../../../assets/svg/DateIcon';
 
 const RentForm = ({ ShowSaveRent }) => {
   const handleSubmit = (e) => {
@@ -7,24 +9,35 @@ const RentForm = ({ ShowSaveRent }) => {
   };
   return (
     <form className="rent-form-cont" onSubmit={handleSubmit}>
-      <div className="size-in-meter">
-        <label htmlFor="width">
-          Width in meter(m)
-          <input type="number" className="normal-input" />
-        </label>
-
-        <label htmlFor="height">
-          Height in meter(m)
-          <input type="number" className="normal-input" />
-        </label>
+      <h1>Basic Information</h1>
+      <div className="rent-form-size">
+        <h2>Size of the land</h2>
+        <div className="meter-size">
+          <h5>Length in meter(m)</h5>
+          <div>
+            <input type="number" placeholder="width..." />
+            <hr />
+            <input type="number" placeholder="height..." />
+          </div>
+        </div>
+        <b>Or</b>
+        <div className="hectare-size">
+          <h5>Length in hectare</h5>
+          <div>
+            <input type="number" placeholder="hectare..." />
+          </div>
+        </div>
       </div>
 
-      <h2>Or</h2>
+      <div className="rent-form-date">
+        <h5>Enter a date of rent</h5>
+        <input type="date" />
+      </div>
 
-      <label htmlFor="hectare">
-        Use Hectare instead
-        <input type="number" className="size-in-hectare" />
-      </label>
+      <div className="rent-form-checkbox">
+        <i><CheckIcon color="#fafbfa" /></i>
+        <h2>Click the button if this the first time to caltuvate your land</h2>
+      </div>
 
       <button type="submit" className="rent-calculate">PROCEED</button>
 
