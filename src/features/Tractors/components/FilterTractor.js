@@ -6,7 +6,7 @@ const FilterTractor = () => (
   <div className="filter-tractor-cont">
     Filter by price range
     <div className="filter-tractor-inputs">
-      <MoneyIcon color="#abbc41" />
+      <MoneyIcon color="#192f5133" />
       <input type="number" placeholder="from..." />
       <hr />
       <input type="number" placeholder="up to..." />

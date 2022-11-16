@@ -140,10 +140,8 @@
 
       a {
         svg {
-          width: 40px;
-          height: 40px;
-          border: 1px $btn-green-color solid;
-          border-radius: 50%;
+          width: 22px;
+          height: 27px;
         }
       }
     }
@@ -212,8 +210,8 @@
       .popular-arrow {
         a {
           svg {
-            width: 30px;
-            height: 30px;
+            width: 18px;
+            height: 23px;
           }
         }
       }
@@ -255,6 +253,15 @@
   .popular-cont {
     .popular-cards-cont {
       grid-template-columns: 150px 150px 150px 150px 150px auto;
+
+      .popular-arrow {
+        a {
+          svg {
+            width: 12px;
+            height: 18px;
+          }
+        }
+      }
     }
   }
 }

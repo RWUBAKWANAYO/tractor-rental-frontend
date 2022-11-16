@@ -24,7 +24,7 @@
       border: none;
       width: 1px;
       height: 60%;
-      background-color: $btn-green-color;
+      background-color: rgba(25, 47, 81, 0.2) ;
     }
     input {
       height: 100%;
@@ -45,7 +45,7 @@
   font-size: $medium-fonts;
   width: 50%;
   div {
-    border: 1px $btn-green-color solid;
+    border: 1px rgba(25, 47, 81, 0.2) solid;
     overflow: hidden;
     margin-top: 5px;
     height: 32px;
@@ -62,7 +62,7 @@
       font-size: $medium-fonts;
     }
     input::placeholder {
-      color: rgba(0, 0, 0, 0.4);
+      color: rgba(25, 47, 81, 0.4);
     }
   }
 }
@@ -70,8 +70,8 @@
 .popular-tractors-filters {
   height: 35px;
   width: 100px;
-  border: 1px solid $btn-green-color;
-  color: $light-blue-color;
+  background-color: $dark-green-color;
+  color: $lighter-gray-color;
   border-radius: 5px;
   font-size: $medium-fonts;
   svg {
@@ -83,8 +83,8 @@
 .clear-tractors-filters {
   height: 35px;
   width: 100px;
-  border: 1px solid $btn-green-color;
-  color: $light-blue-color;
+  background-color: $btn-green-color;
+  color: $lighter-gray-color;
   border-radius: 5px;
   font-size: $medium-fonts;
   svg {

@@ -12,13 +12,10 @@ body {
   background-color: $lighter-gray-color;
   color: $dark-blue-color;
 }
-main{
-  width: 100%;
-  overflow-x: hidden;
-}
+
 section{
   width: 100%;
-  min-height: calc(100vh - 440px);
+  min-height: 70vh;
 }
 
 button {

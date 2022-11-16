@@ -10,7 +10,7 @@ const SearchTractor = () => {
     <div className="search-tractor-cont">
       Search by name
       <div>
-        <SearchIcon color="#abbc41" />
+        <SearchIcon color="#192f5133" />
         <input type="search" placeholder="example:john deere..." />
         <button type="button">Apply</button>
       </div>

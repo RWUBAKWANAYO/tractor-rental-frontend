@@ -32,7 +32,7 @@
 
   .new-rental-wrapper {
     overflow: auto;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 0 10px rgba(25, 47, 81, 0.1);
     width: calc(450px - 4rem);
     height: calc(100% - 120px);
     padding: 120px 2rem 0 2rem;
@@ -117,7 +117,7 @@
       display: flex;
       justify-content: space-between;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(25, 47, 81, 0.2);
       font-size: $medium-fonts;
       font-weight: 400;
       b{

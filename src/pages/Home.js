@@ -47,7 +47,7 @@ const Home = () => (
       <div className="popular-cards-cont">
         <div className="popular-arrow">
           <NavLink to="/tractors">
-            <ArrowCircleIcon />
+            <ArrowCircleIcon color="#192f51" />
           </NavLink>
         </div>
         {TractorsData

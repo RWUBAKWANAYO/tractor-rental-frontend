@@ -11,7 +11,7 @@ const MyRent = () => {
           <div className="rent-card" key={tractor}>
             <div className="rent-card-cont">
               <div>
-                <img src="https://cdn.britannica.com/13/100513-050-1DB2C84D/Tractor-loader.jpg" alt="tractor" />
+                <img src="https://res.cloudinary.com/nayo/image/upload/v1668488821/trac6_elrouh.png" alt="tractor" />
                 <span>
                   <h3>John Dreller</h3>
                   <p>20 Dec 2022</p>
@@ -23,14 +23,14 @@ const MyRent = () => {
               </h1>
             </div>
             <div onClick={() => setMore(true)} aria-hidden="true" className="myrent-open-btn">
-              <Button name="view more" styleclass="light-btn" />
+              <Button name="view more" styleclass="blue-btn" />
             </div>
           </div>
         ))}
       </div>
       <div className="my-rent-desc" style={{ display: `${more ? 'flex' : ''}` }}>
         <div className="my-rent-desc-cont">
-          <img src="https://cdn.britannica.com/13/100513-050-1DB2C84D/Tractor-loader.jpg" alt="tractor" />
+          <img src="https://res.cloudinary.com/nayo/image/upload/v1668488821/trac6_elrouh.png" alt="tractor" />
           <div>
             <h3>Tractor Info</h3>
             <ul>

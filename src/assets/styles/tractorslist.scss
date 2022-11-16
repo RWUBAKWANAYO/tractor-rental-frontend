@@ -25,8 +25,8 @@
       height: 35px;
       margin-left: 10px;
       width: 130px;
-      border: 1px solid $btn-green-color;
-      color: $light-blue-color;
+      background-color: $light-blue-color;
+      color: $lighter-gray-color;
       border-radius: 5px;
       font-size: $large-fonts;
       font-style: normal;
@@ -36,9 +36,9 @@
     i {
       
       height: fit-content;
-      width: 22px;
-      height: 22px;
-      margin-left: 5px;
+      width: 8px;
+      height: 13px;
+      margin-left: 10px;
     }
     svg {
       width: 100%;
@@ -79,7 +79,7 @@
     .list-card {
       cursor: pointer;
       .tractor-card {
-        border: 1px rgba(0, 0, 0, 0.2) solid;
+        border: 1px rgba(25, 47, 81, 0.2) solid;
         border-radius: 10px;
         height: 100%;
         width: 100%;

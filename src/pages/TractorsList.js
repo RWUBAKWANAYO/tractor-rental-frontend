@@ -24,10 +24,10 @@ const TractorsList = () => {
       { result.status === 'ok-exist' && (
       <div className="list-cont">
         <div className="filters-title">
-          <h2>Find Tractors by name, price, popularity.</h2>
+          <h2>Search Tractors by name, price, trends.</h2>
           <button type="button" onClick={() => setFilters(!filters)} aria-hidden="true">
-            Find now
-            <i style={{ transform: `${filters ? 'rotate(90deg)' : ''}` }}><ArrowCircleIcon /></i>
+            Search
+            <i style={{ transform: `${filters ? 'rotate(90deg)' : ''}` }}><ArrowCircleIcon color="#fafbfa" /></i>
           </button>
         </div>
         <div className="tractors-list-bar" style={{ display: `${filters ? 'flex' : ''}` }}>
@@ -37,12 +37,12 @@ const TractorsList = () => {
           </div>
           <div className="list-filter-buttons">
             <button type="button" className="popular-tractors-filters">
-              <TrendIcon color="#192f51" />
+              <TrendIcon color="#fafbfa" />
               Popular
             </button>
 
             <button type="button" className="clear-tractors-filters">
-              <ClearFilterIcon color="#192f51" />
+              <ClearFilterIcon color="#fafbfa" />
               Reset
             </button>
           </div>
