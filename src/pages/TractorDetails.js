@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 import '../assets/styles/tractordetails.scss';
 import { NewRent } from '../features/Rent/components';
 import WarningCard from '../components/ui/Card/WarningCard';
-import { RentalWarning } from '../data/Warning.constants';
+import { CalculateWarning } from '../data/Warning.constants';
 import tractorimg from '../assets/images/tractor_img.png';
 
 const TractorDetails = () => {
@@ -33,7 +33,7 @@ const TractorDetails = () => {
             <h5>{`Daily completion: ${tractor.data.completion} hectare`}</h5>
             <h5>{`Popularity: ${tractor.data.demand} demands`}</h5>
           </div>
-          <WarningCard warning={RentalWarning} />
+          <WarningCard warning={CalculateWarning} />
           <div className="details-calculate">
             <h1>
               <sup>RWF</sup>
@@ -43,7 +43,7 @@ const TractorDetails = () => {
               <Button name="CALCULATE" styleclass="colored-btn" />
             </div>
           </div>
-          {rent && <NewRent ShowRent={ShowRent} />}
+          {rent && <NewRent ShowRent={ShowRent} tractorData={tractor.data} />}
         </div>
       </div>
       )}

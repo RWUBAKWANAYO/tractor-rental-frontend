@@ -1,8 +1,9 @@
 import React from 'react';
 import { CheckIcon } from '../../../assets/svg';
-import DateIcon from '../../../assets/svg/DateIcon';
+import WarningCard from '../../../components/ui/Card/WarningCard';
+import { PriceWarning } from '../../../data/Warning.constants';
 
-const RentForm = ({ ShowSaveRent }) => {
+const RentForm = ({ ShowSaveRent, tractorData }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     ShowSaveRent();
@@ -38,8 +39,8 @@ const RentForm = ({ ShowSaveRent }) => {
         <i><CheckIcon color="#fafbfa" /></i>
         <h2>Click the button if this the first time to caltuvate your land</h2>
       </div>
-
-      <button type="submit" className="rent-calculate">PROCEED</button>
+      <WarningCard warning={PriceWarning(tractorData)} />
+      <button type="submit" className="rent-calculate">Procced</button>
 
     </form>
   );

@@ -35,11 +35,11 @@
     box-shadow: -4px 0 10px rgba(25, 47, 81, 0.1);
     width: calc(450px - 4rem);
     height: calc(100% - 2rem);
-    padding: 4rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
     background-color: $lighter-gray-color;
 
     h1 {
-      font-size: $x-larger-fonts;
+      font-size: $larger-fonts;
       font-weight: 500;
       text-align: center;
       margin-bottom: 1rem;
@@ -51,7 +51,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: auto;
-  row-gap: 1rem;
+  row-gap: 0.5rem;
   color: $dark-green-color;
 
   h2 {
@@ -68,7 +68,7 @@
 
   .rent-form-size {
     width: calc(100% - 2rem);
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem;
     border: 1px solid $dark-blue-color;
     position: relative;
     border-radius: 5px;
@@ -180,7 +180,7 @@
   background-color: $dark-green-color;
   color: $white-color;
   font-size: $large-fonts;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .save_rent {
