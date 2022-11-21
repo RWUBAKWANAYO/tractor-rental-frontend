@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../tractors.scss';
 import { SearchIcon } from '../../../assets/svg';
 
-const SearchTractor = () => {
+const SearchTractorsName = () => {
   useEffect(() => {
 
   }, []);
@@ -18,4 +18,4 @@ const SearchTractor = () => {
   );
 };
 
-export default SearchTractor;
+export default SearchTractorsName;

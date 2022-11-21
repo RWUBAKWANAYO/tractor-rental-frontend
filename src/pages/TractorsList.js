@@ -1,23 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import '../assets/styles/tractorslist.scss';
-import { ArrowCircleIcon, ClearFilterIcon, TrendIcon } from '../assets/svg';
-import { TractorCard } from '../components/ui/Card';
-import { SearchTractor, FilterTractor } from '../features/Tractors';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { FetchAllTractors } from '../features/Tractors/services';
+import { ArrowCircleIcon } from '../assets/svg';
+import { TractorCard } from '../components/ui/Card';
+import {
+  SearchTractorsName, FilterTractorsPrice, PopularTractorsButton, AllTractorsButton,
+} from '../features/Tractors';
 
 const TractorsList = () => {
   const navigate = useNavigate();
-  const handleClick = (id) => navigate(`/tractors/${id}`);
   const dispatch = useDispatch();
-  const tractors = useSelector((state) => state.alltractors);
-  const [result, setResult] = useState(tractors);
+  const alltractors = useSelector((state) => state.alltractors);
+  const populartractors = useSelector((state) => state.populartractors);
+
+  const [result, setResult] = useState(alltractors);
+  const [filters, setFilters] = useState(false);
+
+  const handleNavigate = (id) => navigate(`/tractors/${id}`);
 
   useEffect(() => { dispatch(FetchAllTractors()); }, []);
-  useEffect(() => { setResult(tractors); }, [tractors]);
-
-  const [filters, setFilters] = useState(false);
+  useEffect(() => { setResult(alltractors); }, [alltractors]);
+  useEffect(() => { setResult(populartractors); }, [populartractors]);
 
   return (
     <>
@@ -34,19 +39,13 @@ const TractorsList = () => {
 
           <div className="tractors-list-bar" style={{ display: `${filters ? 'flex' : ''}` }}>
             <div className="list-filter-inputs">
-              <SearchTractor />
-              <FilterTractor />
+              <SearchTractorsName />
+              <FilterTractorsPrice />
             </div>
             <div className="list-filter-buttons">
-              <button type="button" className="popular-tractors-filters">
-                <TrendIcon color="#fafbfa" />
-                Popular
-              </button>
+              <PopularTractorsButton />
+              <AllTractorsButton />
 
-              <button type="button" className="clear-tractors-filters">
-                <ClearFilterIcon color="#fafbfa" />
-                Reset
-              </button>
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ const TractorsList = () => {
             <div
               className="list-card"
               key={tractor.id}
-              onClick={() => handleClick(tractor.id)}
+              onClick={() => handleNavigate(tractor.id)}
               aria-hidden="true"
             >
               <TractorCard tractor={tractor} />

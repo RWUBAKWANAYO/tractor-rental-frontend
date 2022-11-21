@@ -1,2 +1,4 @@
-export { default as SearchTractor } from './components/SearchTractor';
-export { default as FilterTractor } from './components/FilterTractor';
+export { default as SearchTractorsName } from './components/SearchTractorsName';
+export { default as FilterTractorsPrice } from './components/FilterTractorsPrice';
+export { default as AllTractorsButton } from './components/AllTractorsButton';
+export { default as PopularTractorsButton } from './components/PopularTractorsButton';
