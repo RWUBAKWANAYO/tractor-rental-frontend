@@ -23,31 +23,34 @@ const TractorsList = () => {
     <>
       { result.status === 'ok-exist' && (
       <div className="list-cont">
-        <div className="filters-title">
-          <h2>Search Tractors by name, price, trends.</h2>
-          <button type="button" onClick={() => setFilters(!filters)} aria-hidden="true">
-            Search
-            <i style={{ transform: `${filters ? 'rotate(90deg)' : ''}` }}><ArrowCircleIcon color="#fafbfa" /></i>
-          </button>
-        </div>
-        <div className="tractors-list-bar" style={{ display: `${filters ? 'flex' : ''}` }}>
-          <div className="list-filter-inputs">
-            <SearchTractor />
-            <FilterTractor />
-          </div>
-          <div className="list-filter-buttons">
-            <button type="button" className="popular-tractors-filters">
-              <TrendIcon color="#fafbfa" />
-              Popular
-            </button>
-
-            <button type="button" className="clear-tractors-filters">
-              <ClearFilterIcon color="#fafbfa" />
-              Reset
+        <div className="filters-cont">
+          <div className="filters-title">
+            <h2>Search Tractors by name, price, trends.</h2>
+            <button type="button" onClick={() => setFilters(!filters)} aria-hidden="true">
+              Search
+              <i style={{ transform: `${filters ? 'rotate(90deg)' : ''}` }}><ArrowCircleIcon color="#fafbfa" /></i>
             </button>
           </div>
 
+          <div className="tractors-list-bar" style={{ display: `${filters ? 'flex' : ''}` }}>
+            <div className="list-filter-inputs">
+              <SearchTractor />
+              <FilterTractor />
+            </div>
+            <div className="list-filter-buttons">
+              <button type="button" className="popular-tractors-filters">
+                <TrendIcon color="#fafbfa" />
+                Popular
+              </button>
+
+              <button type="button" className="clear-tractors-filters">
+                <ClearFilterIcon color="#fafbfa" />
+                Reset
+              </button>
+            </div>
+          </div>
         </div>
+
         <div className="list-cards-cont">
           {result.data.map((tractor) => (
             <div

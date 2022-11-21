@@ -11,7 +11,7 @@ const initialState = {
 
 export const FetchAllTractors = createAsyncThunk('alltractors', async (_, { rejectWithValue }) => {
   try {
-    const res = await AxiosInstance({ url: 'api/v1/tractors_by_price' });
+    const res = await AxiosInstance({ url: 'api/v1/tractors' });
     return res.data.data;
   } catch (error) {
     rejectWithValue(error);

@@ -1,14 +1,12 @@
 import React from 'react';
 import './card.scss';
-import tractorimg from '../../../assets/images/tractor_img.png';
-import TextMinimizer from '../../../utils/TextMinimizer';
 
 const TractorCard = ({ tractor }) => (
   <div className="tractor-card" id="main-card">
-    <img src={tractor.image_url} alt="tractor" />
+    <img src={tractor.photo} alt="tractor" />
     <h4>{tractor.name}</h4>
-    <p>9 heactare per day</p>
-    <p>256 Peaple demanded</p>
+    <p>{`${tractor.completion} Heactare per day`}</p>
+    <p>{`${tractor.demand} Peaple demanded`}</p>
     <small>{`${tractor.price}RWF`}</small>
   </div>
 );
