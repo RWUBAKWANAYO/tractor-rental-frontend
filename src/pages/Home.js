@@ -11,13 +11,13 @@ import { HeroDesc, ProcedureData } from '../data/Home.constants';
 import { ArrowCircleIcon } from '../assets/svg';
 import TractorCard from '../components/ui/Card/TractorCard';
 import { ProcedureCard } from '../components/ui/Card';
-import { FetchAllTractors } from '../features/Tractors/services';
+import { FetchPopularTractors } from '../features/Tractors/services';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const tractors = useSelector((state) => state.alltractors);
+  const populartractors = useSelector((state) => state.populartractors);
 
-  useEffect(() => { dispatch(FetchAllTractors()); }, []);
+  useEffect(() => { dispatch(FetchPopularTractors()); }, []);
 
   return (
     <section className="home-content">
@@ -41,7 +41,7 @@ const Home = () => {
         </div>
       </div>
 
-      { tractors.status === 'ok-exist' && (
+      { populartractors.status === 'ok-exist' && (
       <div className="popular-cont">
         <img src={popularBg} alt="svg" className="popular-bg" />
         <h1>Most popular</h1>
@@ -51,7 +51,7 @@ const Home = () => {
               <ArrowCircleIcon color="#192f51" />
             </NavLink>
           </div>
-          {tractors.data.slice(0, 5).map((tractor) => (
+          {populartractors.data.slice(0, 5).map((tractor) => (
             <TractorCard key={tractor.id} tractor={tractor} />))}
         </div>
       </div>
