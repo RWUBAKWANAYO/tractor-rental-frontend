@@ -7,10 +7,9 @@ import '../assets/styles/tractordetails.scss';
 import { NewRent } from '../features/Rent/components';
 import WarningCard from '../components/ui/Card/WarningCard';
 import { CalculateWarning } from '../data/Warning.constants';
-import tractorimg from '../assets/images/tractor_img.png';
 
 const TractorDetails = () => {
-  const [rent, setRent] = useState(true);
+  const [rent, setRent] = useState(false);
   const ShowRent = (bool) => setRent(bool);
   const { tractorId } = useParams();
 
@@ -23,7 +22,7 @@ const TractorDetails = () => {
       {tractor.status === 'ok-exist' && (
       <div className="tractor-details-cont">
         <div className="tractor-details-img">
-          <img src={tractorimg} alt="tractor" />
+          <img src={tractor.data.photo} alt="tractor" />
         </div>
         <div className="tractor-details-desc">
           <h1>{tractor.data.name}</h1>

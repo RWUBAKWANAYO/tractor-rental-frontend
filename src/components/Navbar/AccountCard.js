@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import ProfileImage from './ProfileImage';
 
-const AccountCard = () => (
+const AccountCard = ({ user }) => (
   <div className="navbar-account-access-wrapper">
     <div className="access-wrapper-profile">
-      <ProfileImage />
+      <ProfileImage user={user} />
     </div>
-    <h4>Rwubakwanayo Olivier</h4>
-    <small>rwubakwanayoolivier@gmail.com</small>
-    <Link to="/myrent"><Button name="My Rent" styleclass="colored-btn" /></Link>
+    <h4>{user.name}</h4>
+    <small>{user.email}</small>
+    <Link to={`/myrent/${user.id}`}><Button name="My Rent" styleclass="colored-btn" /></Link>
     <Button name="Logout" styleclass="blue-btn" />
   </div>
 );

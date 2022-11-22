@@ -1,9 +1,10 @@
 import React from 'react';
+import GetProfileLetters from '../../utils/GetProfileLetters';
 
-const ProfileImage = () => (
+const ProfileImage = ({ user }) => (
   <div className="user-photo">
-    <img src="https://img.freepik.com/free-photo/portrait-dark-skinned-cheerful-woman-with-curly-hair-touches-chin-gently-laughs-happily-enjoys-day-off-feels-happy-enthusiastic-hears-something-positive-wears-casual-blue-turtleneck_273609-43443.jpg?w=2000" alt="" />
-    <h2>RO</h2>
+    {user.photo && <img src={user.photo} alt="" />}
+    {!user.photo && <h2>{GetProfileLetters(user.name)}</h2>}
   </div>
 );
 
