@@ -121,20 +121,7 @@
   }
 }
 
-.auth-img {
-  position: relative;
-  .stars-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-  .curves-img {
-    height: 100%;
-    width: 100%;
-  }
-}
+
 
 @media (max-width: 820px) {
   .auth-cont {
@@ -159,19 +146,6 @@
         min-height: calc(60vh - 4rem);
         h1 {
           margin-bottom: 1rem;
-        }
-      }
-      .auth-img {
-        width: 100%;
-
-        .stars-img {
-          width: 160px;
-        }
-        .curves-img {
-          height: 40vh;
-          width: 100%;
-          object-fit: fill;
-          border-bottom-right-radius: 20vw;
         }
       }
     }

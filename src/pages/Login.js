@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import '../features/Authentication/authentication.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { LoginForm, AuthImage } from '../features/Authentication';
+import { LoginForm } from '../features/Authentication';
 import { GetUser } from '../hooks/useLocalStorage';
+import { FormsBg } from '../components/ui/Backgrounds';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Login = () => {
   return (
     <div className="auth-cont">
       <div className="auth-wrapper">
-        <AuthImage />
+        <FormsBg />
         <div className="forms-cont">
           <h1>Sign in</h1>
           <LoginForm />
