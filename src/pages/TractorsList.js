@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/styles/tractorslist.scss';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { FetchAllTractors } from '../features/Tractors/services';
+import { useSelector } from 'react-redux';
 import { ArrowCircleIcon } from '../assets/svg';
 import { TractorCard } from '../components/ui/Card';
 import {
@@ -11,22 +10,24 @@ import {
 
 const TractorsList = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const alltractors = useSelector((state) => state.alltractors);
   const populartractors = useSelector((state) => state.populartractors);
+  const tractorsbyprice = useSelector((state) => state.tractorsbyprice);
+  const tractorsbyname = useSelector((state) => state.tractorsbyname);
 
   const [result, setResult] = useState(alltractors);
   const [filters, setFilters] = useState(false);
 
   const handleNavigate = (id) => navigate(`/tractors/${id}`);
 
-  useEffect(() => { dispatch(FetchAllTractors()); }, []);
   useEffect(() => { setResult(alltractors); }, [alltractors]);
   useEffect(() => { setResult(populartractors); }, [populartractors]);
+  useEffect(() => { setResult(tractorsbyprice); }, [tractorsbyprice]);
+  useEffect(() => { setResult(tractorsbyname); }, [tractorsbyname]);
 
   return (
     <>
-      { result.status === 'ok-exist' && (
+      { result.status !== 'error' && (
       <div className="list-cont">
         <div className="filters-cont">
           <div className="filters-title">
@@ -39,7 +40,7 @@ const TractorsList = () => {
 
           <div className="tractors-list-bar" style={{ display: `${filters ? 'flex' : ''}` }}>
             <div className="list-filter-inputs">
-              <SearchTractorsName />
+              <SearchTractorsName tractors={alltractors.data} />
               <FilterTractorsPrice />
             </div>
             <div className="list-filter-buttons">
@@ -50,6 +51,7 @@ const TractorsList = () => {
           </div>
         </div>
 
+        {result.status === 'ok-exist' && (
         <div className="list-cards-cont">
           {result.data.map((tractor) => (
             <div
@@ -62,6 +64,7 @@ const TractorsList = () => {
             </div>
           ))}
         </div>
+        )}
       </div>
       )}
     </>
