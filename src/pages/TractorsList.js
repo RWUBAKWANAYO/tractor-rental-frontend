@@ -46,7 +46,6 @@ const TractorsList = () => {
             <div className="list-filter-buttons">
               <PopularTractorsButton />
               <AllTractorsButton />
-
             </div>
           </div>
         </div>
