@@ -4,6 +4,7 @@ export const SaveUser = (user) => localStorage.setItem('user', JSON.stringify(us
 
 export const GetUser = (currUser) => {
   const user = currUser || JSON.parse(localStorage.getItem('user'));
+  if (!user) return null;
   return {
     token: user.token,
     info: user.info,

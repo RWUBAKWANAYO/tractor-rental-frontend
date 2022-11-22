@@ -3,21 +3,23 @@ import { Eye, PhotoIcon } from '../../../assets/svg';
 
 const SignupForm = () => {
   const [lock, setLock] = useState(false);
-  const [data, setData] = useState({ picture: null });
+  const [data, setData] = useState({
+    name: null, email: null, picture: null, password: null,
+  });
 
   return (
     <form className="auth-form">
       <label htmlFor="name">
         Full name
-        <input type="text" className="normal-input" />
+        <input type="text" className="normal-input" onChange={(e) => setData({ ...data, name: e.target.value })} />
       </label>
 
       <label htmlFor="email">
         Email
-        <input type="email" className="normal-input" />
+        <input type="email" className="normal-input" onChange={(e) => setData({ ...data, email: e.target.value })} />
       </label>
 
-      <label htmlFor="password">
+      <label htmlFor="file">
         Photo
         <div className="picture-parent">
           <input type="file" accept="image/*" onChange={(e) => setData({ ...data, picture: e.target.files[0] })} />
