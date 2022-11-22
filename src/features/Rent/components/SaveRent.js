@@ -1,16 +1,17 @@
 import React from 'react';
 
-const SaveRent = () => (
+const SaveRent = ({ tractorData, rentData }) => (
+
   <div className="save_rent">
     <h1>Finish the Process</h1>
     <ul>
       <li>
         <b>Tractor name:</b>
-        John Dreel
+        {tractorData.name}
       </li>
       <li>
         <b>Price of rent:</b>
-        85000Rwf
+        {rentData.new_farm ? `${tractorData.new_farm_price}Rwf` : `${tractorData.price} Rwf`}
       </li>
       <li>
         <b>Working hours:</b>
@@ -18,20 +19,32 @@ const SaveRent = () => (
       </li>
       <li>
         <b>Daily completion:</b>
-        10 hectare
+        {`${tractorData.completion} per day`}
       </li>
       <li>
         <b>Size of the land:</b>
-        600m - 100m
+        {rentData.farm_size}
+      </li>
+      <li>
+        <b>Is a farm new ?</b>
+        {rentData.new_farm ? 'yes' : 'No'}
+      </li>
+      <li>
+        <b>Date of rent:</b>
+        {rentData.rent_date}
       </li>
     </ul>
 
     <h5>
-      It will take 8 days to complete your farm and total price will be
+      It will take
       {' '}
-      <span>500000Rwf</span>
+      {rentData.estimated_time}
+      {' '}
+      to complete your farm and total price will be
+      {' '}
+      <span>{rentData.total_cost}</span>
     </h5>
-    <button type="submit" className="rent-calculate">RENT NOW</button>
+    <button type="submit" className="rent-calculate">Rent now</button>
   </div>
 );
 
