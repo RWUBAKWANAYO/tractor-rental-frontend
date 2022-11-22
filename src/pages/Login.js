@@ -9,14 +9,14 @@ const Login = () => {
   const navigate = useNavigate();
   const [token, setToken] = useState(null);
   const loggedin = useSelector((state) => state.login);
+
   useEffect(() => {
     if (loggedin.user) {
-      if (loggedin.user.token === token) return navigate('/tractors');
-      GetUser(loggedin.user);
-      setToken(loggedin.user.token);
+      if (loggedin.user.token === token) setToken(GetUser(loggedin.user).token);
       navigate('/tractors');
     }
   }, [loggedin]);
+
   return (
     <div className="auth-cont">
       <div className="auth-wrapper">
