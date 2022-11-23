@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { LoginSlice, SignupSlice } from '../features/Authentication/services';
+import { AllRentsSlice, NewRentSlice } from '../features/Rent/services';
 import { UpdateProfileSlice } from '../features/Settings/services';
 import {
   AllTractorsSlice,
@@ -19,6 +20,8 @@ const store = configureStore({
     tractorsbyprice: TractorsByPriceSlice,
     tractorsbyname: TractorsByNameSlice,
     tractor: TractorSlice,
+    allrents: AllRentsSlice,
+    newrent: NewRentSlice,
   },
 
 });

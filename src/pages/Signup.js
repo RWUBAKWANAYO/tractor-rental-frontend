@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../features/Authentication/authentication.scss';
+import '../features/Authentication/components/authentication.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { SignupForm } from '../features/Authentication';

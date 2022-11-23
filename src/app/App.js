@@ -16,7 +16,7 @@ const App = () => (
         <Route index element={<Home />} />
         <Route exact path="/tractors" element={<TractorsList />} />
         <Route exact path="/tractors/:tractorId" element={<TractorDetails />} />
-        <Route exact path="/myrent/:userId" element={<MyRent />} />
+        <Route exact path="/myrent" element={<MyRent />} />
       </Route>
       <Route exact path="/update_profile" element={<UpdateProfile />} />
       <Route exact path="/login" element={<Login />} />

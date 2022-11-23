@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../tractors.scss';
+import './tractors.scss';
 import { useDispatch } from 'react-redux';
 import { MoneyIcon } from '../../../assets/svg';
 import { FetchTractorsByPrice } from '../services';

@@ -121,6 +121,16 @@
           background-color: $light-green-color;
           height: 70px;
           width: 100%;
+
+          .edit-link{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            svg{
+              width: 15px;
+              height: 15px;
+            }
+          }
           .user-photo {
             width: 70px;
             height: 70px;
@@ -147,9 +157,10 @@
         
           
         }
-        a{
+        .myrent-link{
           margin-bottom: 1rem;
         }
+
         button {
           width: 210px;
           height: 35px;

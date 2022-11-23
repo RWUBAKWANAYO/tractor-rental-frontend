@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FetchTractor } from '../features/Tractors/services';
 import Button from '../components/ui/Button';
 import '../assets/styles/tractordetails.scss';
-import { NewRent } from '../features/Rent/components';
+import { NewRent } from '../features/Rent';
 import WarningCard from '../components/ui/Card/WarningCard';
 import { CalculateWarning } from '../data/Warning.constants';
 

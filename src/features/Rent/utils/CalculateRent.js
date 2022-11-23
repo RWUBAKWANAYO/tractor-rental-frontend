@@ -11,8 +11,8 @@ const CalculateRent = (tractorData, formData) => {
   return {
     farm_size: formData.hectare !== '' ? `${+formData.hectare} hectare` : `${formData.width}m-${formData.height}m`,
     new_farm: formData.new_farm,
-    total_cost: `${amount} RWF`,
-    estimated_time: days > 1 ? `${days} days` : `${days} day`,
+    total_costs: amount,
+    estimated_time: days > 1 ? days : 1,
     rent_date: formData.date,
   };
 };
