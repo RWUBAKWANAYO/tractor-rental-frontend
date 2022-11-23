@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { EditIcon } from '../../assets/svg';
@@ -20,5 +21,19 @@ const AccountCard = ({ user }) => (
     <Button name="Logout" styleclass="blue-btn" />
   </div>
 );
+
+AccountCard.propTypes = {
+  user: PropTypes.shape({
+    email: PropTypes.string,
+    name: PropTypes.string,
+  }),
+};
+
+AccountCard.defaultProps = {
+  user: {
+    email: '',
+    name: '',
+  },
+};
 
 export default AccountCard;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import './card.scss';
 
@@ -10,5 +11,25 @@ const TractorCard = ({ tractor }) => (
     <small>{`${tractor.price}RWF`}</small>
   </div>
 );
+
+TractorCard.propTypes = {
+  tractor: PropTypes.shape({
+    completion: PropTypes.number,
+    demand: PropTypes.number,
+    name: PropTypes.string,
+    photo: PropTypes.string,
+    price: PropTypes.number,
+  }),
+};
+
+TractorCard.defaultProps = {
+  tractor: {
+    completion: 0,
+    demand: 0,
+    name: '',
+    photo: '',
+    price: 0,
+  },
+};
 
 export default TractorCard;
