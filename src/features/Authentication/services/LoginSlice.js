@@ -24,12 +24,13 @@ export const FetchUser = createAsyncThunk('login', async (formData, { rejectWith
 const LoginSlice = createSlice({
   name: 'login',
   initialState,
+  reducers: { ResetLogin: () => initialState },
   extraReducers: (builder) => {
     builder.addCase(FetchUser.pending, (state) => {
       state.status = 'pending'; state.loading = true; state.user = null; state.error = '';
     });
     builder.addCase(FetchUser.fulfilled, (state, action) => {
-      state.status = 'ok'; state.loading = false; state.user = action.payload; state.error = [];
+      state.status = 'ok'; state.loading = false; state.user = action.payload; state.error = '';
     });
     builder.addCase(FetchUser.rejected, (state, action) => {
       state.status = 'error'; state.loading = false; state.user = null; state.error = action.error;
@@ -37,4 +38,5 @@ const LoginSlice = createSlice({
   },
 });
 
+export const { ResetLogin } = LoginSlice.actions;
 export default LoginSlice.reducer;

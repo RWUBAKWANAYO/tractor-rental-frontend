@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../features/Authentication/authentication.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { LoginForm } from '../features/Authentication';
 import { GetUser } from '../hooks/useLocalStorage';
 import { FormsBg } from '../components/ui/Backgrounds';
+import { ResetLogin } from '../features/Authentication/services';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [token, setToken] = useState(null);
+  const dispatch = useDispatch();
   const loggedin = useSelector((state) => state.login);
 
   useEffect(() => {
     if (loggedin.user) {
-      if (loggedin.user.token === token) setToken(GetUser(loggedin.user).token);
+      GetUser(loggedin.user);
+      dispatch(ResetLogin());
       navigate('/tractors');
     }
   }, [loggedin]);

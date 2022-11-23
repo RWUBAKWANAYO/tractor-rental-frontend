@@ -26,7 +26,7 @@ const TractorSlice = createSlice({
       state.status = 'pending'; state.loading = true; state.data = []; state.error = '';
     });
     builder.addCase(FetchTractor.fulfilled, (state, action) => {
-      state.status = 'ok-exist'; state.loading = false; state.data = action.payload; state.error = [];
+      state.status = 'ok-exist'; state.loading = false; state.data = action.payload; state.error = '';
     });
     builder.addCase(FetchTractor.rejected, (state, action) => {
       state.status = 'error'; state.loading = false; state.data = []; state.error = action.error;

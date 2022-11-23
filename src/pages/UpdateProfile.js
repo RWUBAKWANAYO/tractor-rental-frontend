@@ -1,29 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../features/Authentication/authentication.scss';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { GetUser } from '../hooks/useLocalStorage';
 import { FormsBg } from '../components/ui/Backgrounds';
 import { ChangeProfileForm } from '../features/Settings';
+import { ResetUpdateProfile } from '../features/Settings/services';
 
 const UpdateProfile = () => {
   const navigate = useNavigate();
-  const [token, setToken] = useState(null);
-  const registered = useSelector((state) => state.signup);
+  const dispatch = useDispatch();
+  const updateprofile = useSelector((state) => state.updateprofile);
 
-  // useEffect(() => {
-  //   if (registered.user) {
-  //     if (registered.user.token === token) setToken(GetUser(registered.user).token);
-  //     navigate('/tractors');
-  //   }
-  // }, [registered]);
+  useEffect(() => {
+    if (updateprofile.user) {
+      GetUser(updateprofile.user);
+      dispatch(ResetUpdateProfile());
+      navigate(-1);
+    }
+  }, [updateprofile]);
 
   return (
     <div className="auth-cont">
       <div className="auth-wrapper">
         <FormsBg />
         <div className="forms-cont">
-          <h1>Change profile</h1>
+          <h1>EDIT PROFILE</h1>
           <ChangeProfileForm />
         </div>
 

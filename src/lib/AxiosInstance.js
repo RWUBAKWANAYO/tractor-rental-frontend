@@ -8,4 +8,10 @@ const AxiosInstance = (config) => axios({
   params: config.params,
   data: config.data,
 });
+
+export const AxiosImageUpload = (config) => axios({
+  url: config.url,
+  method: 'POST',
+  data: config.data,
+});
 export default AxiosInstance;

@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../features/Authentication/authentication.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { SignupForm } from '../features/Authentication';
 import { GetUser } from '../hooks/useLocalStorage';
 import { FormsBg } from '../components/ui/Backgrounds';
+import { ResetSignup } from '../features/Authentication/services';
 
 const Signup = () => {
   const navigate = useNavigate();
-  const [token, setToken] = useState(null);
-  const registered = useSelector((state) => state.signup);
+  const dispatch = useDispatch();
+  const signedup = useSelector((state) => state.signup);
 
   useEffect(() => {
-    if (registered.user) {
-      if (registered.user.token === token) setToken(GetUser(registered.user).token);
+    if (signedup.user) {
+      GetUser(signedup.user);
+      dispatch(ResetSignup());
       navigate('/tractors');
     }
-  }, [registered]);
+  }, [signedup]);
 
   return (
     <div className="auth-cont">
