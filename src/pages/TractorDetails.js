@@ -7,6 +7,7 @@ import '../assets/styles/tractordetails.scss';
 import { NewRent } from '../features/Rent';
 import WarningCard from '../components/ui/Card/WarningCard';
 import { CalculateWarning } from '../data/Warning.constants';
+import ScrollPage from '../utils/ScrollPage';
 
 const TractorDetails = () => {
   const [rent, setRent] = useState(false);
@@ -15,7 +16,11 @@ const TractorDetails = () => {
 
   const dispatch = useDispatch();
   const tractor = useSelector((state) => state.tractor);
-  useEffect(() => { dispatch(FetchTractor(tractorId)); }, []);
+
+  useEffect(() => {
+    ScrollPage();
+    dispatch(FetchTractor(tractorId));
+  }, []);
 
   return (
     <>

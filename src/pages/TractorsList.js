@@ -7,6 +7,7 @@ import { TractorCard } from '../components/ui/Card';
 import {
   SearchTractorsName, FilterTractorsPrice, PopularTractorsButton, AllTractorsButton,
 } from '../features/Tractors';
+import ScrollPage from '../utils/ScrollPage';
 
 const TractorsList = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const TractorsList = () => {
   useEffect(() => { setResult(populartractors); }, [populartractors]);
   useEffect(() => { setResult(tractorsbyprice); }, [tractorsbyprice]);
   useEffect(() => { setResult(tractorsbyname); }, [tractorsbyname]);
-
+  useEffect(() => { ScrollPage(); }, []);
   return (
     <>
       { result.status !== 'error' && (

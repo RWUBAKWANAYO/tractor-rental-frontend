@@ -12,12 +12,16 @@ import { ArrowCircleIcon } from '../assets/svg';
 import TractorCard from '../components/ui/Card/TractorCard';
 import { ProcedureCard } from '../components/ui/Card';
 import { FetchPopularTractors } from '../features/Tractors/services';
+import ScrollPage from '../utils/ScrollPage';
 
 const Home = () => {
   const dispatch = useDispatch();
   const populartractors = useSelector((state) => state.populartractors);
 
-  useEffect(() => { dispatch(FetchPopularTractors()); }, []);
+  useEffect(() => {
+    ScrollPage();
+    dispatch(FetchPopularTractors());
+  }, []);
 
   return (
     <section className="home-content">

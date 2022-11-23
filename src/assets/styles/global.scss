@@ -13,11 +13,15 @@ body {
   color: $dark-blue-color;
 }
 
-section{
+section {
   width: 100%;
   min-height: 70vh;
 }
-
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
 button {
   all: unset;
   display: flex;
