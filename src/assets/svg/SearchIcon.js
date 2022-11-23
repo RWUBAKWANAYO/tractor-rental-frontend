@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const SearchIcon = ({ color }) => (
@@ -6,5 +7,9 @@ const SearchIcon = ({ color }) => (
   </svg>
 
 );
+
+SearchIcon.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default SearchIcon;

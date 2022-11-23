@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const FilterIcon = ({ color }) => (
@@ -8,5 +9,9 @@ const FilterIcon = ({ color }) => (
   </svg>
 
 );
+
+FilterIcon.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default FilterIcon;

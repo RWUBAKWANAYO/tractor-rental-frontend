@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const DateIcon = ({ color }) => (
@@ -6,5 +7,9 @@ const DateIcon = ({ color }) => (
   </svg>
 
 );
+
+DateIcon.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default DateIcon;

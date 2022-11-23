@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const EditIcon = ({ color }) => (
@@ -6,5 +7,9 @@ const EditIcon = ({ color }) => (
   </svg>
 
 );
+
+EditIcon.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default EditIcon;

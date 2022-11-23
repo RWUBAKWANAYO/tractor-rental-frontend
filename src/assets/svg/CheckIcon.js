@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const CheckIcon = ({ color }) => (
@@ -6,5 +7,9 @@ const CheckIcon = ({ color }) => (
   </svg>
 
 );
+
+CheckIcon.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default CheckIcon;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const TrendIcon = ({ color }) => (
@@ -6,5 +7,9 @@ const TrendIcon = ({ color }) => (
   </svg>
 
 );
+
+TrendIcon.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default TrendIcon;

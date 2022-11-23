@@ -14,7 +14,7 @@ const AccountCard = ({ user }) => (
     </div>
     <h4>{user.name}</h4>
     <small>{user.email}</small>
-    <Link to={`/myrent/${user.id}`} className="myrent-link">
+    <Link to="/myrent" className="myrent-link">
       <Button name="My Rent" styleclass="colored-btn" />
     </Link>
     <Button name="Logout" styleclass="blue-btn" />

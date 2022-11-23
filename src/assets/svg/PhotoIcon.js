@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const PhotoIcon = ({ color }) => (
@@ -6,5 +7,9 @@ const PhotoIcon = ({ color }) => (
   </svg>
 
 );
+
+PhotoIcon.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default PhotoIcon;

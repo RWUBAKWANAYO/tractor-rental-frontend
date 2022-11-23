@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const Eye = ({ color }) => (
@@ -6,5 +7,9 @@ const Eye = ({ color }) => (
   </svg>
 
 );
+
+Eye.propTypes = {
+  color: PropTypes.string.isRequired,
+};
 
 export default Eye;
