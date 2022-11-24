@@ -8,6 +8,9 @@ import { NewRent } from '../features/Rent';
 import WarningCard from '../components/ui/Card/WarningCard';
 import { CalculateWarning } from '../data/Warning.constants';
 import ScrollPage from '../utils/ScrollPage';
+import { TractorDetailsSkeleton } from '../components/ui/Skeleton';
+import APIAlert from '../components/ui/APIAlert';
+import { ErrorAlert } from '../data/Alerts.constants';
 
 const TractorDetails = () => {
   const [rent, setRent] = useState(false);
@@ -51,6 +54,8 @@ const TractorDetails = () => {
         </div>
       </div>
       )}
+      {tractor.status === 'pending' && (<TractorDetailsSkeleton />)}
+      {tractor.status === 'error' && (<APIAlert data={ErrorAlert()} />)}
     </>
   );
 };

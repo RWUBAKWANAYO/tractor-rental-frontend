@@ -106,21 +106,22 @@
     grid-template-columns: auto;
     row-gap: 0.8rem;
     .large-bar {
-      height: 30px;
+      height: 35px;
       margin: 1rem 0;
     }
     .medium-bar {
-      height: 18px;
+      height: 15px;
+      width: 95%;
     }
   }
 }
 
 .myrent-skeleton {
-  width: 80%;
+  width: 100%;
   display: grid;
   margin: auto;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 1.5rem;
+  grid-template-columns: auto 280px;
+  column-gap: 1rem;
   .rent-list-skeleton {
     display: grid;
     row-gap: 1rem;
@@ -128,7 +129,7 @@
     .rent-card-skeleton {
       width: calc(100% - 2rem);
       padding: 1rem;
-      height: 50px;
+      height: 40px;
       border-radius: 10px;
       display: flex;
       justify-content: space-between;
@@ -141,7 +142,7 @@
       }
       .medium-bar {
         width: 40%;
-        height: 40px;
+        height: 30px;
       }
       .small-bar {
         width: 70px;
@@ -235,7 +236,7 @@
   .hm-skeleton-cont,
   .list-skeleton-cont,
   .details-skeleton,
-  .fileters-skeleton,.myrent-skeleton {
+  .fileters-skeleton {
     width: 90%;
     column-gap: 1rem;
   }

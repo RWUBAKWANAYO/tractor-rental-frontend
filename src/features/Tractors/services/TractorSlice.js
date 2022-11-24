@@ -5,7 +5,7 @@ import AxiosInstance from '../../../lib/AxiosInstance';
 const initialState = {
   status: null,
   loading: false,
-  data: [],
+  data: {},
   error: '',
 };
 
@@ -24,13 +24,13 @@ const TractorSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(FetchTractor.pending, (state) => {
-      state.status = 'pending'; state.loading = true; state.data = []; state.error = '';
+      state.status = 'pending'; state.loading = true; state.data = {}; state.error = '';
     });
     builder.addCase(FetchTractor.fulfilled, (state, action) => {
       state.status = 'ok-exist'; state.loading = false; state.data = action.payload; state.error = '';
     });
     builder.addCase(FetchTractor.rejected, (state, action) => {
-      state.status = 'error'; state.loading = false; state.data = []; state.error = action.error;
+      state.status = 'error'; state.loading = false; state.data = {}; state.error = action.error;
     });
   },
 });
