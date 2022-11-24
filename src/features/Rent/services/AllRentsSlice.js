@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable consistent-return */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { GetUser } from '../../../hooks/useLocalStorage';
 import AxiosInstance from '../../../lib/AxiosInstance';
@@ -19,6 +18,7 @@ export const FetchAllRents = createAsyncThunk('allrents', async (_, { rejectWith
   } catch (error) {
     rejectWithValue(error);
   }
+  return rejectWithValue('Something went wrong!.');
 });
 
 const AllRentsSlice = createSlice({

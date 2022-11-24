@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable consistent-return */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import AxiosInstance from '../../../lib/AxiosInstance';
 
@@ -12,11 +11,12 @@ const initialState = {
 
 export const FetchPopularTractors = createAsyncThunk('populartractors', async (_, { rejectWithValue }) => {
   try {
-    const res = await AxiosInstance({ url: 'api/v1/tractors_by_popular' });
+    const res = await AxiosInstance({ url: 'api/v1/tractors_by_populari' });
     return res.data.data;
   } catch (error) {
     rejectWithValue(error);
   }
+  return rejectWithValue('Something went wrong!.');
 });
 
 const PopularTractorsSlice = createSlice({

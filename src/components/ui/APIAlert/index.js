@@ -4,15 +4,19 @@ import CloudAlertIcon from '../../../assets/svg/CloudAlertIcon';
 import './apialert.scss';
 
 const APIAlert = ({ data }) => {
-  const colors = { success: '#00F08B', warning: '#FFBE17', error: '#E82C2C' };
+  const colors = { success: '#ABBC41', warning: '#FFBE17', error: '#E82C2C' };
   const { status, message, title } = data;
   const iconColor = colors[`${status}`];
-
+  const handleLoad = () => window.location.reload();
   return (
     <div className="api-alert">
       <CloudAlertIcon color={iconColor} />
-      <h1>{title}</h1>
-      <p>{message}</p>
+      <h6 className="alert-title">{title}</h6>
+      <h6 className="alert-text">
+        {message}
+        {' '}
+        <span onClick={handleLoad} aria-hidden="true">Try again</span>
+      </h6>
     </div>
   );
 };

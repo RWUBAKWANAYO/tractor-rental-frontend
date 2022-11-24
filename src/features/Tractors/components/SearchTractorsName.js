@@ -11,7 +11,7 @@ const SearchTractorsName = ({ tractors }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    dispatch(FilterTractorsByName({ tractors, keyword }));
+    dispatch(FilterTractorsByName({ tractors: tractors.data, keyword }));
   };
   return (
     <form className="search-tractor-cont" onSubmit={handleSearch}>

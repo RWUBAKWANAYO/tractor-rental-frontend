@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable consistent-return */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { SaveUser } from '../../../hooks/useLocalStorage';
 import AxiosInstance from '../../../lib/AxiosInstance';
@@ -20,6 +19,7 @@ export const CreateUser = createAsyncThunk('signup', async (formData, { rejectWi
   } catch (error) {
     rejectWithValue(error);
   }
+  return rejectWithValue('Something went wrong!.');
 });
 
 const SignupSlice = createSlice({

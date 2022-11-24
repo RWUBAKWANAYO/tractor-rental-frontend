@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { ClearFilterIcon } from '../../../assets/svg';
-import { FetchAllTractors } from '../services';
 
-const AllTractorsButton = () => {
-  const dispatch = useDispatch();
-  useEffect(() => { dispatch(FetchAllTractors()); }, []);
-  const handleClear = () => dispatch(FetchAllTractors());
+function AllTractorsButton({ handleAllTractors }) {
+  const handleClear = () => handleAllTractors();
 
   return (
     <button type="button" className="clear-tractors-filters" onClick={handleClear}>
@@ -14,6 +11,10 @@ const AllTractorsButton = () => {
       Reset
     </button>
   );
+}
+
+AllTractorsButton.propTypes = {
+  handleAllTractors: PropTypes.func.isRequired,
 };
 
 export default AllTractorsButton;

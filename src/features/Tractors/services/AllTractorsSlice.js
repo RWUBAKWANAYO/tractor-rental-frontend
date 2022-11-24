@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable consistent-return */
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import AxiosInstance from '../../../lib/AxiosInstance';
 
@@ -17,6 +17,7 @@ export const FetchAllTractors = createAsyncThunk('alltractors', async (_, { reje
   } catch (error) {
     rejectWithValue(error);
   }
+  return rejectWithValue('Something went wrong!.');
 });
 
 const AllTractorsSlice = createSlice({

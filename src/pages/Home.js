@@ -13,6 +13,9 @@ import TractorCard from '../components/ui/Card/TractorCard';
 import { ProcedureCard } from '../components/ui/Card';
 import { FetchPopularTractors } from '../features/Tractors/services';
 import ScrollPage from '../utils/ScrollPage';
+import { HomeTractorsSkeleton } from '../components/ui/Skeleton';
+import APIAlert from '../components/ui/APIAlert';
+import { EmptyListAlert, ErrorAlert } from '../data/Alerts.constants';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -45,10 +48,10 @@ const Home = () => {
         </div>
       </div>
 
-      { populartractors.status === 'ok-exist' && (
       <div className="popular-cont">
         <img src={popularBg} alt="svg" className="popular-bg" />
         <h1>Most popular</h1>
+        { populartractors.status === 'ok-exist' && (
         <div className="popular-cards-cont">
           <div className="popular-arrow">
             <NavLink to="/tractors">
@@ -58,8 +61,11 @@ const Home = () => {
           {populartractors.data.slice(0, 5).map((tractor) => (
             <TractorCard key={tractor.id} tractor={tractor} />))}
         </div>
+        )}
+        {populartractors.status === 'pending' && (<HomeTractorsSkeleton />)}
+        {populartractors.status === 'ok-empty' && (<APIAlert data={EmptyListAlert('tractor')} />)}
+        {populartractors.status === 'error' && (<APIAlert data={ErrorAlert()} />)}
       </div>
-      )}
     </section>
   );
 };
