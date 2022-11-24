@@ -1,6 +1,5 @@
 import React from 'react';
 import './skeleton.scss';
-import CardSkeleton from './CardSkeleton';
 
 export const HomeTractorsSkeleton = () => (
   <div className="hm-skeleton-cont">
