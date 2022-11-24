@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import Button from '../../../components/ui/Button';
 import DateFormat from '../../../utils/DateFormat';
@@ -34,6 +35,23 @@ const RentList = ({ handleData, allrents }) => {
       ))}
     </div>
   );
+};
+
+RentList.propTypes = {
+  allrents: PropTypes.shape({
+    data: PropTypes.shape([]),
+    status: PropTypes.string,
+    error: PropTypes.string,
+  }),
+  handleData: PropTypes.func.isRequired,
+};
+
+RentList.defaultProps = {
+  allrents: {
+    data: [],
+    status: '',
+    error: '',
+  },
 };
 
 export default RentList;

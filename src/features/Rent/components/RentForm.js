@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { CheckIcon } from '../../../assets/svg';
 import WarningCard from '../../../components/ui/Card/WarningCard';
@@ -77,6 +78,26 @@ const RentForm = ({ handleRent, tractorData }) => {
 
     </form>
   );
+};
+
+RentForm.propTypes = {
+  handleRent: PropTypes.func.isRequired,
+  tractorData: PropTypes.shape({
+    completetion: PropTypes.number,
+    name: PropTypes.string,
+    new_farm_price: PropTypes.number,
+    photo: PropTypes.string,
+    price: PropTypes.number,
+  }),
+};
+RentForm.defaultProps = {
+  tractorData: {
+    completetion: 0,
+    name: '',
+    new_farm_price: 0,
+    photo: '',
+    price: 0,
+  },
 };
 
 export default RentForm;

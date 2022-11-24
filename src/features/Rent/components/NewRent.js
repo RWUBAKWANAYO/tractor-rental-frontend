@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import './rent.scss';
 import { useNavigate } from 'react-router-dom';
@@ -44,6 +45,14 @@ const NewRent = ({ ShowRent, tractorData }) => {
       )}
     </div>
   );
+};
+
+NewRent.propTypes = {
+  ShowRent: PropTypes.func.isRequired,
+  tractorData: PropTypes.shape({}),
+};
+NewRent.defaultProps = {
+  tractorData: {},
 };
 
 export default NewRent;

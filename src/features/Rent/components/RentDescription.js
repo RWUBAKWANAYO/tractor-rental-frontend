@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../../../components/ui/Button';
 import DateFormat from '../../../utils/DateFormat';
@@ -41,6 +42,49 @@ const RentDescription = ({ details, handleData }) => {
       </div>
     </div>
   );
+};
+
+RentDescription.propTypes = {
+  details: PropTypes.shape({
+    data: PropTypes.shape({
+      tractor: PropTypes.shape({
+        completetion: PropTypes.number,
+        name: PropTypes.string,
+        new_farm_price: PropTypes.number,
+        photo: PropTypes.string,
+        price: PropTypes.number,
+      }),
+      rent: PropTypes.shape({
+        farm_size: PropTypes.string,
+        new_farm: PropTypes.bool,
+        rent_date: PropTypes.string,
+        total_costs: PropTypes.number,
+      }),
+    }),
+    status: PropTypes.bool,
+  }),
+  handleData: PropTypes.func.isRequired,
+};
+
+RentDescription.defaultProps = {
+  details: {
+    data: {
+      tractor: {
+        completetion: 0,
+        name: '',
+        new_farm_price: 0,
+        photo: '',
+        price: 0,
+      },
+      rent: {
+        farm_size: '',
+        new_farm: false,
+        rent_date: '',
+        total_costs: 0,
+      },
+    },
+    status: false,
+  },
 };
 
 export default RentDescription;

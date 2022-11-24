@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+import PropTypes from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import DateFormat from '../../../utils/DateFormat';
@@ -7,7 +9,6 @@ const SaveRent = ({ tractorData, rentData }) => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    // eslint-disable-next-line camelcase
     const {
       new_farm, farm_size, total_costs, rent_date, estimated_time,
     } = rentData;
@@ -59,6 +60,40 @@ const SaveRent = ({ tractorData, rentData }) => {
       <button type="submit" className="rent-calculate" onClick={handleClick}>Rent now</button>
     </div>
   );
+};
+
+SaveRent.propTypes = {
+  rentData: PropTypes.shape({
+    estimated_time: PropTypes.number,
+    farm_size: PropTypes.number,
+    new_farm: PropTypes.bool,
+    rent_date: PropTypes.string,
+    total_costs: PropTypes.number,
+  }),
+  tractorData: PropTypes.shape({
+    completion: PropTypes.number,
+    id: PropTypes.number,
+    name: PropTypes.string,
+    new_farm_price: PropTypes.number,
+    price: PropTypes.number,
+  }),
+};
+
+SaveRent.defaultProps = {
+  rentData: {
+    estimated_time: 0,
+    farm_size: 0,
+    new_farm: false,
+    rent_date: '',
+    total_costs: 0,
+  },
+  tractorData: {
+    completion: 0,
+    id: 0,
+    name: '',
+    new_farm_price: 0,
+    price: 0,
+  },
 };
 
 export default SaveRent;

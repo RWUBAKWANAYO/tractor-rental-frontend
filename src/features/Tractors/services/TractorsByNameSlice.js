@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable consistent-return */
 import { createSlice } from '@reduxjs/toolkit';
 
 const TractorsByNameSlice = createSlice({

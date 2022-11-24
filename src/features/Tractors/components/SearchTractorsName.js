@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import './tractors.scss';
 import { useDispatch } from 'react-redux';
@@ -28,6 +29,13 @@ const SearchTractorsName = ({ tractors }) => {
       </div>
     </form>
   );
+};
+
+SearchTractorsName.propTypes = {
+  tractors: PropTypes.shape([]),
+};
+SearchTractorsName.defaultProps = {
+  tractors: [],
 };
 
 export default SearchTractorsName;
