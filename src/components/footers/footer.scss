@@ -1,0 +1,156 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
+
+.footer-container {
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+  margin-top: 8vw;
+  background-color: $dark-green-color;
+  color: $lighter-gray-color;
+  position: relative;
+  z-index: 5;
+
+  h5 {
+    color: rgba(255, 255, 255, 0.452);
+    text-align: center;
+    padding-top: 1rem;
+    font-size: $card-desc-font;
+    font-weight: 400;
+    border-top: 1px rgba(255, 255, 255, 0.452) solid;
+  }
+
+  .footer-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-size: $largest-fonts;
+
+      span:last-child {
+        color: $btn-green-color;
+      }
+    }
+
+    h4 {
+      font-size: $x-large-fonts;
+      margin-bottom: 1rem;
+    }
+
+    .contact-cont {
+      .contact-icons {
+        div {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+
+          svg {
+            width: 25px;
+            height: 35px;
+          }
+
+          small {
+            font-size: $card-desc-font;
+          }
+        }
+      }
+    }
+
+    .follow-cont {
+      div {
+        display: flex;
+        column-gap: 1rem;
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    .footer-wrapper {
+      .contact-cont {
+        .contact-icons {
+          div {
+            column-gap: 10px;
+
+            svg {
+              width: 25px;
+              height: 35px;
+            }
+          }
+        }
+      }
+
+      .follow-cont {
+        div {
+          column-gap: 1rem;
+
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .footer-container {
+    margin-top: 6rem;
+
+    .footer-wrapper {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    h5 {
+      font-size: $medium-fonts;
+    }
+
+    .footer-wrapper {
+      width: fit-content;
+      flex-direction: column;
+      row-gap: 2rem;
+
+      h1 {
+        font-size: $largest-fonts;
+      }
+
+      h4 {
+        font-size: $larger-fonts;
+        font-weight: 400;
+        margin-bottom: 0.2rem;
+      }
+
+      .contact-cont {
+        .contact-icons {
+          div {
+            small {
+              font-size: $large-fonts;
+            }
+          }
+        }
+      }
+
+      .follow-cont {
+        div {
+          svg {
+            margin-top: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}

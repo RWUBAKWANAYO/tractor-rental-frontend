@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$roboto-font: 'Roboto', sans-serif;
+
+$largest-fonts:calc(16px + 1.5vw);
+$x-larger-fonts:calc(16px + 1vw);
+$larger-fonts:calc(14px + 1vw);
+$x-large-fonts:calc(13px + 0.5vw);
+$large-fonts:calc(12px + 0.3vw);
+$medium-fonts:calc(10px + 0.3vw);
+$x-small-fonts:calc(10px + 0.1vw);
+$small-fonts:calc(10px);
+$paragraph-font: calc(13px + 0.2vw);
+$card-desc-font: calc(11px + 0.15vw);

@@ -1,0 +1,33 @@
+.forms-bg {
+  position: relative;
+
+  .stars-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .curves-img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .forms-bg {
+    width: 100%;
+
+    .stars-img {
+      width: 160px;
+    }
+
+    .curves-img {
+      height: 40vh;
+      width: 100%;
+      object-fit: fill;
+      border-bottom-right-radius: 20vw;
+    }
+  }
+}
