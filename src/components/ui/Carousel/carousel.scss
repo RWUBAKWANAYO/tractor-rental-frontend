@@ -1,0 +1,89 @@
+@import "../../../assets/styles/colors.scss";
+.adds-cont {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .adds-shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    animation: 12s shadowanim ease-in-out infinite;
+  }
+  .adds-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    min-height: 320px;
+    animation: 12s scrollanim infinite;
+
+    .add {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes shadowanim {
+  0% {
+    background-color: $lighter-gray-color;
+  }
+  5% {
+    background-color: transparent;
+  }
+  35% {
+    background-color: transparent;
+  }
+  40% {
+    background-color: $lighter-gray-color;
+  }
+  45% {
+    background-color: transparent;
+  }
+  65% {
+    background-color: transparent;
+  }
+  70% {
+    background-color: $lighter-gray-color;
+  }
+  75% {
+    background-color: transparent;
+  }
+  95% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: $lighter-gray-color;
+  }
+}
+
+@keyframes scrollanim {
+  0% {
+    left: 0;
+  }
+  39.99% {
+    left: 0;
+  }
+  40% {
+    left: -100%;
+  }
+  69.99% {
+    left: -100%;
+  }
+  70% {
+    left: -200%;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+@media (max-width: 820px) {
+  .adds-cont {
+    .adds-img {
+      min-height: 40vw;
+    }
+  }
+}

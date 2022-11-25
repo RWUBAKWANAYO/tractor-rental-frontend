@@ -3,7 +3,6 @@ import '../assets/styles/home.scss';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import heroBg from '../assets/images/bg1.png';
-import heroimg from '../assets/images/test1.png';
 import procedureBg from '../assets/images/bg2.png';
 import popularBg from '../assets/images/bg3.png';
 import Button from '../components/ui/Button';
@@ -16,6 +15,7 @@ import ScrollPage from '../utils/ScrollPage';
 import { HomeTractorsSkeleton } from '../components/ui/Skeleton';
 import APIAlert from '../components/ui/APIAlert';
 import { EmptyListAlert, ErrorAlert } from '../data/Alerts.constants';
+import Carousel from '../components/ui/Carousel';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const Home = () => {
             <p>{HeroDesc}</p>
             <NavLink to="/tractors"><Button name="Rent now" styleclass="curved-btn" /></NavLink>
           </div>
-          <div className="hero-img"><img src={heroimg} alt="tractor" /></div>
+          <div className="hero-img"><Carousel /></div>
         </div>
       </div>
 
