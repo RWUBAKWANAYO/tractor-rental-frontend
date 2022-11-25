@@ -15,7 +15,7 @@ const Navbar = () => {
       setUser(null);
     }
   };
-  useEffect(() => { handleUserInfo(); console.log(user); }, []);
+  useEffect(() => { handleUserInfo(); }, []);
   return (
     <nav className="navbar-cont">
       <div className="navbar-wrapper">

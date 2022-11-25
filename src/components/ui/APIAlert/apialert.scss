@@ -1,26 +1,28 @@
 @import '../../../assets/styles/colors.scss';
 @import '../../../assets/styles/fonts.scss';
 
-
-.api-alert{
+.api-alert {
   width: 80%;
   background-color: $lighter-gray-color;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:2rem auto;
+  margin: 2rem auto;
 
-  svg{
+  svg {
     width: calc(50px + 10vw);
     height: calc(50px + 10vw);
   }
-  .alert-title{
+
+  .alert-title {
     font-size: $largest-fonts;
   }
-  .alert-text{
+
+  .alert-text {
     font-size: $large-fonts;
     font-weight: 400;
-    span{
+
+    span {
       text-decoration: underline;
       cursor: pointer;
     }

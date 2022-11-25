@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import {
   EmailIcon,
   GithubIcon,
@@ -22,11 +21,11 @@ const Footer = () => (
         <div className="contact-icons">
           <div>
             <EmailIcon />
-            <small>rwubakwanayoolivier@gmail.com</small>
+            <small>winnie@gmail.com</small>
           </div>
           <div>
             <PhoneIcon />
-            <small>+250782775175</small>
+            <small>+250 780 659 431</small>
           </div>
         </div>
       </div>
@@ -34,15 +33,15 @@ const Footer = () => (
       <div className="follow-cont">
         <h4>Follow Us</h4>
         <div>
-          <NavLink to="/">
+          <a href="https://twitter.com" target="blank">
             <TwitterIcon />
-          </NavLink>
-          <NavLink to="/">
+          </a>
+          <a href="https://www.linkedin.com" target="blank">
             <LinkedinIcon />
-          </NavLink>
-          <NavLink to="/">
+          </a>
+          <a href="https://github.com" target="blank">
             <GithubIcon />
-          </NavLink>
+          </a>
         </div>
       </div>
     </div>

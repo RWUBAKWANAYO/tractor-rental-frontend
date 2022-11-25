@@ -11,6 +11,7 @@
   backdrop-filter: blur(4px);
   display: flex;
   justify-content: flex-end;
+
   .rent-close {
     position: absolute;
     top: 0;
@@ -52,9 +53,11 @@
   grid-template-columns: auto;
   row-gap: 0.5rem;
   color: $dark-green-color;
+
   h3 {
     margin-bottom: 1rem;
   }
+
   h2 {
     font-size: $card-desc-font;
     font-weight: 500;
@@ -86,11 +89,13 @@
       padding: 0 10px;
       background-color: $lighter-gray-color;
     }
+
     h5 {
       font-size: $card-desc-font;
       font-weight: 500;
       margin-top: 0;
     }
+
     b {
       font-size: $larger-fonts;
       font-weight: 400;
@@ -114,6 +119,7 @@
           border: none;
           background-color: rgba(25, 47, 81, 0.4);
         }
+
         input {
           width: calc(50% - 10.5px);
           text-align: center;
@@ -121,8 +127,10 @@
         }
       }
     }
+
     .hectare-size {
       width: 100%;
+
       input {
         border-radius: 5px;
         border: 1px rgba(25, 47, 81, 0.4) solid;
@@ -138,6 +146,7 @@
     display: flex;
     align-items: center;
     margin: 0.5rem 0;
+
     i {
       border: 1px solid $dark-blue-color;
       cursor: pointer;
@@ -147,10 +156,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       svg {
         width: 70%;
       }
     }
+
     h2 {
       margin-left: 10px;
     }
@@ -158,10 +169,12 @@
 
   .rent-form-date {
     width: 100%;
+
     h5 {
       font-size: $card-desc-font;
       font-weight: 500;
     }
+
     input {
       border-radius: 5px;
       border: 1px $dark-green-color solid;
@@ -185,6 +198,7 @@
 
 .save_rent {
   width: 100%;
+
   h3 {
     margin: 2rem 0;
   }
@@ -192,6 +206,7 @@
   ul {
     width: 100%;
     margin: 1rem 0;
+
     li {
       display: flex;
       justify-content: space-between;
@@ -199,26 +214,31 @@
       border-bottom: 1px solid rgba(25, 47, 81, 0.2);
       font-size: $medium-fonts;
       font-weight: 400;
+
       b {
         font-weight: 400;
       }
     }
   }
+
   #saverent-costs {
     font-size: $medium-fonts;
     font-weight: 500;
     text-align: center;
     line-height: 1.5;
     margin: 2rem 0 1.5rem 0;
+
     span {
       color: $btn-green-color;
     }
   }
+
   #total-rent {
     font-size: $larger-fonts;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+
     small,
     sup {
       font-size: $medium-fonts;
@@ -242,6 +262,7 @@
     grid-gap: 1rem;
     height: fit-content;
   }
+
   .rent-card {
     height: fit-content;
     display: flex;
@@ -251,10 +272,12 @@
     box-shadow: 0 0 4px rgba(25, 47, 81, 0.1);
     border-radius: 5px;
     padding: 15px;
+
     .rent-card-cont {
       display: flex;
       justify-content: space-between;
       width: calc(50% + 45px);
+
       div {
         display: flex;
         align-items: center;
@@ -274,6 +297,7 @@
             font-weight: 700;
             margin-bottom: 5px;
           }
+
           p {
             font-size: $medium-fonts;
             font-weight: 400;
@@ -282,6 +306,7 @@
           }
         }
       }
+
       h1 {
         font-size: $x-large-fonts;
         color: $btn-green-color;
@@ -322,6 +347,7 @@
         width: 100%;
         background-color: $light-green-color;
       }
+
       div {
         padding: 20px;
 
@@ -338,6 +364,7 @@
             line-height: 1.3;
           }
         }
+
         hr {
           border: none;
           height: 1px;
@@ -346,8 +373,10 @@
           margin: 20px 0 15px 0;
         }
       }
+
       .myrent-close-btn {
         display: none;
+
         button {
           width: 100%;
           height: 40px;
@@ -363,6 +392,7 @@
     .my-rent-list {
       width: 100%;
     }
+
     .my-rent-desc {
       position: fixed;
       top: 0;
@@ -406,15 +436,19 @@
         flex-direction: column;
         align-items: flex-start;
         row-gap: 10px;
+
         .rent-card-cont {
           width: 100%;
+
           div {
             justify-content: space-between;
             min-width: 60%;
           }
         }
+
         .myrent-open-btn {
           width: 100%;
+
           button {
             width: 100%;
           }

@@ -8,19 +8,20 @@
   border-bottom-right-radius: 20px;
 }
 
-.light-btn{
+.light-btn {
   background-color: $white-color;
   border-radius: 5px;
   border: 1px $btn-green-color solid;
   color: $dark-green-color;
 }
-.blue-btn{
+
+.blue-btn {
   background-color: $dark-blue-color;
   border-radius: 5px;
   color: $white-color;
 }
 
-.colored-btn{
+.colored-btn {
   background-color: $btn-green-color;
   color: $white-color;
   border-radius: 5px;

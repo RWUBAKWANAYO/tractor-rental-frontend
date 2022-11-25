@@ -54,12 +54,13 @@
   }
 }
 
-.user-photo{
+.user-photo {
   border-radius: 50%;
   position: relative;
   overflow: hidden;
   border: 1px rgba(25, 47, 81, 0.05) solid;
-  img{
+
+  img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -69,7 +70,8 @@
     background-color: $white-color;
     object-fit: cover;
   }
-  h2{
+
+  h2 {
     width: 100%;
     height: 100%;
     position: relative;
@@ -82,109 +84,110 @@
   }
 }
 
-  .navbar-account {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
+.navbar-account {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
 
-    .navbar-account-prof {
-      cursor: pointer;
-      .user-photo {
-        width: 40px;
-        height: 40px;
-      }
+  .navbar-account-prof {
+    cursor: pointer;
 
+    .user-photo {
+      width: 40px;
+      height: 40px;
     }
-    .navbar-account-access {
-      position: absolute;
-      top: 40px;
-      right: 0;
-      width: 250px;
-      padding-top: 10px;
-      display: none;
+  }
 
-      .navbar-account-access-wrapper {
+  .navbar-account-access {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    padding-top: 10px;
+    display: none;
+
+    .navbar-account-access-wrapper {
+      width: 100%;
+      background-color: $white-color;
+      box-shadow: 0 4px 4px rgba(25, 47, 81, 0.1);
+      border: 1px solid rgba(25, 47, 81, 0.1);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+
+      .access-wrapper-profile {
+        position: relative;
+        background-color: $light-green-color;
+        height: 70px;
         width: 100%;
-        background-color: $white-color;
-        box-shadow: 0 4px 4px rgba(25, 47, 81, 0.1);
-        border: 1px solid rgba(25, 47, 81, 0.1);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        overflow: hidden;
-        padding-bottom: 3rem;
-        .access-wrapper-profile {
-          position: relative;
-          background-color: $light-green-color;
+
+        .edit-link {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+        }
+
+        .user-photo {
+          width: 70px;
           height: 70px;
-          width: 100%;
-
-          .edit-link{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            svg{
-              width: 15px;
-              height: 15px;
-            }
-          }
-          .user-photo {
-            width: 70px;
-            height: 70px;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-        h4{
-          width: calc(100% - 20px);
-          font-size: $large-fonts;
-          font-weight: 400;
-          
-          margin:40px 0 5px 0;
-          
-        }
-        small{
-          width: calc(100% - 20px);
-          font-weight: 300;
-          font-size: $x-small-fonts;
-          
-          letter-spacing: 1px;
-          margin-bottom:2rem ;
-        
-          
-        }
-        .myrent-link{
-          margin-bottom: 1rem;
-        }
-
-        button {
-          width: 210px;
-          height: 35px;
-        }
-        .light-bnt{
-          background-color: $dark-green-color;
-          color: $white-color;
+          top: 30px;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
-    }
 
-    .navbar-account-prof:hover ~ .navbar-account-access {
-      display: block;
-    }
+      h4 {
+        width: calc(100% - 20px);
+        font-size: $large-fonts;
+        font-weight: 400;
+        margin: 40px 0 5px 0;
+      }
 
-    .navbar-account-access:hover {
-      display: block;
+      small {
+        width: calc(100% - 20px);
+        font-weight: 300;
+        font-size: $x-small-fonts;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+      }
+
+      .myrent-link {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        width: 210px;
+        height: 35px;
+      }
+
+      .light-bnt {
+        background-color: $dark-green-color;
+        color: $white-color;
+      }
     }
   }
 
-
-  @media (max-width: 768px) {
-    
-    .navbar-wrapper {
-      width: 90%;
-    }
+  .navbar-account-prof:hover ~ .navbar-account-access {
+    display: block;
   }
+
+  .navbar-account-access:hover {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    width: 90%;
+  }
+}

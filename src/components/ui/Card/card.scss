@@ -80,11 +80,12 @@
   .procedure-card {
     row-gap: 1rem;
     padding: 3rem 0.5rem 3rem 0.5rem;
+
     img {
       width: calc(30px + 10%);
     }
 
-    svg{
+    svg {
       transform: rotate(90deg);
     }
   }
