@@ -8,7 +8,7 @@ import {
 } from '../../assets/svg';
 import './footer.scss';
 
-const Footer = () => (
+const MainFooter = () => (
   <div className="footer-container">
     <div className="footer-wrapper">
       <h1>
@@ -47,4 +47,4 @@ const Footer = () => (
   </div>
 );
 
-export default Footer;
+export default MainFooter;
