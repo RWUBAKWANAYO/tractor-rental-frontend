@@ -2,18 +2,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { GetUser } from '../../../hooks/useLocalStorage';
 import DateFormat from '../../../utils/DateFormat';
 import { CreateRent } from '../services';
 
 const SaveRent = ({ tractorData, rentData }) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleClick = () => {
+    if (!GetUser()) return navigate('/login');
     const {
       new_farm, farm_size, total_costs, rent_date, estimated_time,
     } = rentData;
 
-    dispatch(CreateRent({
+    return dispatch(CreateRent({
       tractor_id: tractorData.id, new_farm, farm_size, total_costs, rent_date, estimated_time,
     }));
   };

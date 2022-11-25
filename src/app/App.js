@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { RequireAuth, RequireNoAuth } from '../hooks/ProtectRoutes';
 import Layout from '../Layout';
 import { ToastifyContainer } from '../lib/ToastifyLoaders';
 import Home from '../pages/Home';
@@ -20,11 +21,17 @@ const App = () => (
           <Route index element={<Home />} />
           <Route exact path="/tractors" element={<TractorsList />} />
           <Route exact path="/tractors/:tractorId" element={<TractorDetails />} />
-          <Route exact path="/myrent" element={<MyRent />} />
+          <Route element={<RequireAuth />}>
+            <Route exact path="/myrent" element={<MyRent />} />
+          </Route>
         </Route>
-        <Route exact path="/update_profile" element={<UpdateProfile />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/signup" element={<Signup />} />
+        <Route element={<RequireAuth />}>
+          <Route exact path="/update_profile" element={<UpdateProfile />} />
+        </Route>
+        <Route element={<RequireNoAuth />}>
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signup" element={<Signup />} />
+        </Route>
         <Route exact path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
