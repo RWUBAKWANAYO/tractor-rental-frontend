@@ -8,13 +8,14 @@ import { GetUser } from '../../hooks/useLocalStorage';
 const Navbar = () => {
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
+  const handleUserInfo = () => {
     if (GetUser()) {
       setUser(GetUser().info);
     } else {
       setUser(null);
     }
-  }, []);
+  };
+  useEffect(() => { handleUserInfo(); console.log(user); }, []);
   return (
     <nav className="navbar-cont">
       <div className="navbar-wrapper">
@@ -35,7 +36,7 @@ const Navbar = () => {
               <ProfileImage user={user} />
             </div>
             <div className="navbar-account-access">
-              <AccountCard user={user} />
+              <AccountCard user={user} handleUserInfo={handleUserInfo} />
             </div>
           </div>
           )}

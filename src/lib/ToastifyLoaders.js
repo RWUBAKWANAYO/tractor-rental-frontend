@@ -28,7 +28,7 @@ export const ToastifyFunc = (status, message) => {
       type: toast.TYPE.SUCCESS,
       isLoading: false,
       toastId: status,
-      autoClose: 3000,
+      autoClose: 2000,
       closeOnClick: true,
     });
   }
@@ -40,7 +40,7 @@ export const ToastifyFunc = (status, message) => {
       type: toast.TYPE.ERROR,
       isLoading: false,
       toastId: status,
-      autoClose: 3000,
+      autoClose: 2000,
       closeOnClick: true,
     });
   }

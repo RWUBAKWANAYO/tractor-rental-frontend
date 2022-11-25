@@ -11,3 +11,5 @@ export const GetUser = (currUser) => {
     expired: DecodeToken(user.token).exp,
   };
 };
+
+export const RemoveUser = () => localStorage.removeItem('user');
