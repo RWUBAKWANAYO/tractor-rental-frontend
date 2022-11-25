@@ -2,6 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { GetUser } from '../../../hooks/useLocalStorage';
 import AxiosInstance from '../../../lib/AxiosInstance';
+import { ToastifyFunc } from '../../../lib/ToastifyLoaders';
 
 const initialState = {
   status: null,
@@ -12,12 +13,15 @@ const initialState = {
 
 export const CreateRent = createAsyncThunk('newrent', async (formData, { rejectWithValue }) => {
   const { token } = GetUser();
+  ToastifyFunc('pending', 'Wait for creating rent...');
   try {
     const res = await AxiosInstance({
       url: 'api/v1/rents', method: 'POST', headers: { Authorization: token }, data: formData,
     });
+    ToastifyFunc('ok', 'Rent created successfully!');
     return res.data.data;
   } catch (error) {
+    ToastifyFunc('error');
     rejectWithValue(error);
   }
   return rejectWithValue('Something went wrong!.');

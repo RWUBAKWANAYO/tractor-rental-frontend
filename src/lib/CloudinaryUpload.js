@@ -1,6 +1,8 @@
 import { AxiosImageUpload } from './AxiosInstance';
+import { ToastifyFunc } from './ToastifyLoaders';
 
 const CloudinaryUpload = async (userFile) => {
+  ToastifyFunc('pending');
   try {
     const formData = new FormData();
     formData.append('file', userFile);
@@ -12,6 +14,7 @@ const CloudinaryUpload = async (userFile) => {
     });
     return res.data;
   } catch (error) {
+    ToastifyFunc('error', 'Image upload fail!');
     return { status: 'error', error };
   }
 };

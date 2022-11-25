@@ -2,6 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { SaveUser } from '../../../hooks/useLocalStorage';
 import AxiosInstance from '../../../lib/AxiosInstance';
+import { ToastifyFunc } from '../../../lib/ToastifyLoaders';
 
 const initialState = {
   status: null,
@@ -11,15 +12,17 @@ const initialState = {
 };
 
 export const CreateUser = createAsyncThunk('signup', async (formData, { rejectWithValue }) => {
+  ToastifyFunc('pending');
   try {
     const res = await AxiosInstance({ url: 'signup', method: 'POST', data: { user: formData } });
     const user = { token: res.headers.authorization, info: res.data.user };
     SaveUser(user);
+    ToastifyFunc('ok', 'Register successfully!');
     return user;
   } catch (error) {
-    rejectWithValue(error);
+    ToastifyFunc('error', error.response.data.errors[0]);
+    return rejectWithValue(error.response.data.errors[0]);
   }
-  return rejectWithValue('Something went wrong!.');
 });
 
 const SignupSlice = createSlice({

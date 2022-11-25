@@ -20,7 +20,7 @@ const SaveRent = ({ tractorData, rentData }) => {
 
   return (
     <div className="save_rent">
-      <h1>Finish the Process</h1>
+      <h3>Finish the Process</h3>
       <ul>
         <li>
           <b>Tractor name:</b>

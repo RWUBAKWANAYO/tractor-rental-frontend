@@ -21,7 +21,7 @@ const RentForm = ({ handleRent, tractorData }) => {
   };
   return (
     <form className="rent-form-cont" onSubmit={handleSubmit}>
-      <h1>Basic Information</h1>
+      <h3>Basic Information</h3>
       <div className="rent-form-size">
         <h2>Size of the land</h2>
         <div className="meter-size">

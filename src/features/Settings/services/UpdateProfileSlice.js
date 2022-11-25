@@ -2,6 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { GetUser, SaveUser } from '../../../hooks/useLocalStorage';
 import AxiosInstance from '../../../lib/AxiosInstance';
+import { ToastifyFunc } from '../../../lib/ToastifyLoaders';
 
 const initialState = {
   status: null,
@@ -17,12 +18,13 @@ export const ProfileUpdateFunc = createAsyncThunk('updateprofile', async (formDa
       url: `api/v1/users/${info.id}`, method: 'PUT', headers: { Authorization: token }, data: formData,
     });
     const user = { token, info: res.data.user };
+    ToastifyFunc('ok', 'Profile updated successfully!');
     SaveUser(user);
     return user;
   } catch (error) {
-    rejectWithValue(error);
+    ToastifyFunc('error', 'Fail to update profile!');
+    return rejectWithValue(error);
   }
-  return rejectWithValue('Something went wrong!.');
 });
 
 const UpdateProfileSlice = createSlice({
