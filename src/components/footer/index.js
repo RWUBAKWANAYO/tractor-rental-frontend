@@ -15,7 +15,6 @@ const Footer = () => (
         Tractor
         <span>Rental</span>
       </h1>
-
       <div className="contact-cont">
         <h4>Contact Us</h4>
         <div className="contact-icons">
@@ -29,7 +28,6 @@ const Footer = () => (
           </div>
         </div>
       </div>
-
       <div className="follow-cont">
         <h4>Follow Us</h4>
         <div>
