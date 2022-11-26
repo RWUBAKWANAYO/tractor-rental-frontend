@@ -6,6 +6,7 @@ import { FetchAllRents } from '../features/Rent/services';
 import { MyRentSkeleton } from '../components/ui/Skeleton';
 import APIAlert from '../components/ui/APIAlert';
 import { EmptyListAlert, ErrorAlert } from '../data/Alerts.constants';
+import ScrollPage from '../utils/ScrollPage';
 
 const MyRent = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const MyRent = () => {
     return setDetails({ status: action.status, data: action.data });
   };
 
-  useEffect(() => { dispatch(FetchAllRents()); }, []);
+  useEffect(() => { ScrollPage(); dispatch(FetchAllRents()); }, []);
 
   return (
     <div className="my-rent">
