@@ -1,18 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { EditIcon } from '../../assets/svg';
-import { RemoveUser } from '../../hooks/useLocalStorage';
+import { LogoutFunc } from '../../features/Authentication/services';
 import Button from '../ui/Button';
 import ProfileImage from './ProfileImage';
 
-const AccountCard = ({ user, handleUserInfo }) => {
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    RemoveUser();
-    handleUserInfo();
-    navigate('/');
-  };
+const AccountCard = ({ user }) => {
+  const dispatch = useDispatch();
+  const handleLogout = () => dispatch(LogoutFunc());
   return (
     <div className="navbar-account-access-wrapper">
       <div className="access-wrapper-profile">
@@ -38,7 +35,6 @@ AccountCard.propTypes = {
     email: PropTypes.string,
     name: PropTypes.string,
   }),
-  handleUserInfo: PropTypes.func.isRequired,
 };
 
 AccountCard.defaultProps = {

@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './navbar.scss';
+import { useDispatch, useSelector } from 'react-redux';
 import ProfileImage from './ProfileImage';
 import AccountCard from './AccountCard';
 import { GetUser } from '../../hooks/useLocalStorage';
+import { ResetLogout } from '../../features/Authentication/services';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [user, setUser] = useState(null);
+  const logout = useSelector((state) => state.logout);
 
   const handleUserInfo = () => {
     if (GetUser()) {
@@ -16,6 +21,13 @@ const Navbar = () => {
     }
   };
   useEffect(() => { handleUserInfo(); }, []);
+  useEffect(() => {
+    if (logout.status === 'ok') {
+      handleUserInfo();
+      dispatch(ResetLogout());
+      navigate('/');
+    }
+  }, [logout]);
   return (
     <nav className="navbar-cont">
       <div className="navbar-wrapper">
