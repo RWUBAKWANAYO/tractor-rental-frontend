@@ -116,3 +116,17 @@
     width: 90%;
   }
 }
+@media (max-width: 500px) {
+  .tractor-details-cont {
+   .tractor-details-desc{
+    .details-warning{
+      width: calc(100% - 30px);
+      padding: 0 15px 15px 15px;
+
+      h5{
+        margin-bottom: 0.2rem;
+      }
+    }
+   }
+  }
+}

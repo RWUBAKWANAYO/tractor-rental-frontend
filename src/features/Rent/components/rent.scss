@@ -35,8 +35,8 @@
     overflow: auto;
     box-shadow: -4px 0 10px rgba(25, 47, 81, 0.1);
     width: calc(450px - 4rem);
-    height: calc(100% - 2rem);
-    padding: 2rem 2rem 0 2rem;
+    height: calc(100% - 4rem);
+    padding: 2rem;
     background-color: $lighter-gray-color;
 
     h3 {
@@ -164,6 +164,7 @@
 
     h2 {
       margin-left: 10px;
+      width: calc(100% - 30px);
     }
   }
 
@@ -425,8 +426,31 @@
 
 @media (max-width: 500px) {
   .new-rental-cont {
+    .rent-close {
+      width: 25px;
+      height: 25px;
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    
     .new-rental-wrapper {
       width: calc(90% - 4rem);
+    }
+    .rent-form-cont {
+      .rent-form-size {
+        padding: 0.2rem 1rem 1rem 1rem;
+        .hectare-size{
+          h5{
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .rent-calculate{
+margin-bottom: 0;
     }
   }
 
