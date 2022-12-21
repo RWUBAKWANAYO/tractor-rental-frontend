@@ -20,31 +20,30 @@ const MainFooter = () => (
         <div className="contact-icons">
           <div>
             <EmailIcon />
-            <small>winnie@gmail.com</small>
+            <small>rwubakwanayoolivier@gmail.com</small>
           </div>
           <div>
             <PhoneIcon />
-            <small>+250 780 659 431</small>
+            <small>+250782775175</small>
           </div>
         </div>
       </div>
       <div className="follow-cont">
         <h4>Follow Us</h4>
         <div>
-          <a href="https://twitter.com" target="blank">
+          <a href="https://twitter.com/rwubakwanayo?t=fP8ZzLHMQWRnyBXnHGhEwA&s=09" target="blank">
             <TwitterIcon />
           </a>
-          <a href="https://www.linkedin.com" target="blank">
+          <a href="https://rw.linkedin.com/in/rwubakwanayo-olivier?trk=people-guest_people_search-card" target="blank">
             <LinkedinIcon />
           </a>
-          <a href="https://github.com" target="blank">
+          <a href="https://github.com/RWUBAKWANAYO" target="blank">
             <GithubIcon />
           </a>
         </div>
       </div>
     </div>
-    <h5>&copy;2022 TractorRental || Powered by Winnie</h5>
+    <h5>&copy;2022 TractorRental || Powered by Rwubakwanayo Olivier</h5>
   </div>
 );
-
 export default MainFooter;
